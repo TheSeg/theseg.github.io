@@ -9,6 +9,7 @@
   <![endif]-->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+  <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
   <link href="css/bootswatch.css" rel="stylesheet" media="screen">
   <link href="css/seg_resume.css" rel="stylesheet" media="screen">
   <script src="js/jquery-2.0.0.min.js"></script>
@@ -55,10 +56,10 @@
     <ul class="nav nav-pills">
       <li><a href="#introduction">Introduction</a></li>
       <li><a href="#recommendations">Recommendations</a></li>
-      <li><a href="#navbar">Project Rolls</a></li>
-      <li><a href="#buttons">Skills</a></li>
-      <li><a href="#forms">Released Titles</a></li>
-      <li><a href="#miscellaneous">Contact</a></li>
+      <li><a href="#positions">Project Positions</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#releasedtitles">Released Titles &amp; Rolls</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </header>
@@ -76,20 +77,25 @@
   <!-- Headings & Paragraph Copy -->
   <div class="row">
 
-    <div class="span8">
+    <div class="span4">
       <div class="well">
         <p>Seg's experience brings you the opportunity to create interactive narratives that engage the audience in rich, meaningful experiences, and expand the potential of your team in a respectful and rewarding environment.</p>
       </div>
     </div>
 
     <div class="span4">
-      <h3>Example addresses</h3>
+      <h3>External Websites</h3>
       <address>
-        <abbr title="Phone">P:</abbr> (415) 742-1SEG
+        <i class="icon-github icon-large"></i> <a href="http://github.com/TheSeg" target="_blank">@TheSeg</a><br>
+        <i class="icon-linkedin icon-large"></i> <a href="http://www.linkedin.com/in/johnseggerson/" target="_blank">LinkedIn Profile</a>
       </address>
+    </div>
+    
+    <div class="span4">
+      <h3>Contact Info</h3>
       <address>
-        <strong>John "Seg" Seggerson</strong><br>
-        <a href="mailto:#">first.last@gmail.com</a>
+        <abbr title="Phone"><i class="icon-phone"></i></abbr> (415) 742-1SEG<br>
+        <abbr title="E-mail"><i class="icon-envelope"></i></abbr>&nbsp; <a href="mailto:#">first.last@gmail.com</a>
       </address>
     </div>
 
@@ -109,13 +115,13 @@
     <div class="span6">
       <blockquote>
         <p>Seg is a self starter in general, so it was always comforting to know he knew exactly what needed his attention first and how long he should be spending on that task before moving on to the next.</p>
-        <small>Matthew Hansen, Senior Producer @ Double Fine Productions</small>
+        <small><strong>Matthew Hansen</strong>, Senior Producer @ Double Fine Productions</small>
       </blockquote>
     </div>
     <div class="span6">
       <blockquote class="pull-right">
         <p>Seg is one of the hardest working, easiest to work with, intelligent and forthright employees I have ever known at any organization.</p>
-        <small>Stefan Antonowicz, Director of Engineering @ Wired Magazine</small>
+        <small><strong>Stefan Antonowicz</strong>, Director of Engineering @ Wired Magazine</small>
       </blockquote>
     </div>
   </div>
@@ -123,13 +129,13 @@
     <div class="span6">
       <blockquote>
         <p>He put in so much extra time and effort to ensure that the games we released took advantage of new technology and were smartly produced.</p>
-        <small>John Joy, Assistant Producer @ Telltale Games</small>
+        <small><strong>John Joy</strong>, Assistant Producer @ Telltale Games</small>
       </blockquote>
     </div>
     <div class="span6">
       <blockquote class="pull-right">
         <p>John displayed remarkable maturity and organizational skills and made my job much easier. His attention to detail and adherence to best practices made him a star player at Emerson.</p>
-        <small>Eben Goodman, Associate Director of Software &amp; Systems Development @ Berkleemusic</small>
+        <small><strong>Eben Goodman</strong>, Associate Director of Software &amp; Systems Development @ Berkleemusic</small>
       </blockquote>
     </div>
   </div>
@@ -139,168 +145,28 @@
 
 <!-- Buttons
 ================================================== -->
-<section id="buttons">
+<section id="positions">
   <div class="page-header">
-    <h1>Buttons</h1>
+    <h1>Project Positions</h1>
   </div>
   
 </section>
 
 
-<!-- Forms
+<!-- Skills
 ================================================== -->
-<section id="forms">
+<section id="skills">
   <div class="page-header">
-    <h1>Forms</h1>
-  </div>
-
-  <div class="row">
-    <div class="span10 offset1">
-
-	    <form class="well form-search">
-	      <input type="text" class="input-medium search-query">
-	      <button type="submit" class="btn">Search</button>
-	    </form>
-
-        <form class="well form-search">
-          <input type="text" class="input-small" placeholder="Email">
-          <input type="password" class="input-small" placeholder="Password">
-          <button type="submit" class="btn">Go</button>
-        </form>
-
-
-      <form class="form-horizontal well">
-        <fieldset>
-          <legend>Controls Bootstrap supports</legend>
-          <div class="control-group">
-            <label class="control-label" for="input01">Text input</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="input01">
-              <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox">Checkbox</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox" value="option1">
-                Option one is this and that&mdash;be sure to include why it's great
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="select01">Select list</label>
-            <div class="controls">
-              <select id="select01">
-                <option>something</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="multiSelect">Multicon-select</label>
-            <div class="controls">
-              <select multiple="multiple" id="multiSelect">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="fileInput">File input</label>
-            <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="textarea">Textarea</label>
-            <div class="controls">
-              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="focusedInput">Focused input</label>
-            <div class="controls">
-              <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Uneditable input</label>
-            <div class="controls">
-              <span class="input-xlarge uneditable-input">Some value here</span>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="disabledInput">Disabled input</label>
-            <div class="controls">
-              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
-                This is a disabled checkbox
-              </label>
-            </div>
-          </div>
-          <div class="control-group warning">
-            <label class="control-label" for="inputWarning">Input with warning</label>
-            <div class="controls">
-              <input type="text" id="inputWarning">
-              <span class="help-inline">Something may have gone wrong</span>
-            </div>
-          </div>
-          <div class="control-group error">
-            <label class="control-label" for="inputError">Input with error</label>
-            <div class="controls">
-              <input type="text" id="inputError">
-              <span class="help-inline">Please correct the error</span>
-            </div>
-          </div>
-          <div class="control-group success">
-            <label class="control-label" for="inputSuccess">Input with success</label>
-            <div class="controls">
-              <input type="text" id="inputSuccess">
-              <span class="help-inline">Woohoo!</span>
-            </div>
-          </div>
-          <div class="control-group info">
-            <label class="control-label" for="selectError">Select with info</label>
-            <div class="controls">
-              <select id="selectError">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <span class="help-inline">Woohoo!</span>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button type="reset" class="btn">Cancel</button>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+    <h1>Skills</h1>
   </div>
 
 </section>
 
 <!-- Tables
 ================================================== -->
-<section id="tables">
+<section id="releasedtitles">
   <div class="page-header">
-    <h1>Tables</h1>
+    <h1>Released Titles &amp; Rolls</h1>
   </div>
   
   <table class="table table-bordered table-striped table-hover">
@@ -338,216 +204,10 @@
 
 <!-- Miscellaneous
 ================================================== -->
-<section id="miscellaneous">
+<section id="contact">
   <div class="page-header">
-    <h1>Miscellaneous</h1>
+    <h1>Contact</h1>
   </div>
-
-  <div class="row">
-    <div class="span4">
-
-      <h3 id="breadcrumbs">Breadcrumbs</h3>
-      <ul class="breadcrumb">
-        <li class="active">Home</li>
-      </ul>
-      <ul class="breadcrumb">
-        <li><a href="#">Home</a> <span class="divider">/</span></li>
-        <li><a href="#">Library</a> <span class="divider">/</span></li>
-        <li class="active">Data</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h3 id="pagination">Pagination</h3>
-      <div class="pagination">
-        <ul>
-          <li><a href="#">&larr;</a></li>
-          <li class="active"><a href="#">10</a></li>
-          <li class="disabled"><a href="#">...</a></li>
-          <li><a href="#">20</a></li>
-          <li><a href="#">&rarr;</a></li>
-        </ul>
-      </div>
-      <div class="pagination pagination-centered">
-        <ul>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="span4">
-      <h3 id="pager">Pagers</h3>
-        
-        <ul class="pager">
-          <li><a href="#">Previous</a></li>
-          <li><a href="#">Next</a></li>
-        </ul>
-        
-        <ul class="pager">
-          <li class="previous disabled"><a href="#">&larr; Older</a></li>
-          <li class="next"><a href="#">Newer &rarr;</a></li>
-        </ul>
-    </div>
-  </div>
-
-
-  <!-- Navs
-  ================================================== -->
-
-  <div class="row">
-    <div class="span4">
-
-      <h3 id="tabs">Tabs</h3>
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-        <li><a href="#B" data-toggle="tab">Section 2</a></li>
-        <li class="disabled"><a href="#" data-toggle="tab">Section 3</a></li>
-      </ul>
-      <div class="tabbable">
-        <div class="tab-content">
-          <div class="tab-pane active" id="A">
-            <p>I'm in Section A.</p>
-          </div>
-          <div class="tab-pane" id="B">
-            <p>Howdy, I'm in Section B.</p>
-          </div>
-          <div class="tab-pane" id="C">
-            <p>What up girl, this is Section C.</p>
-          </div>
-        </div>
-      </div> <!-- /tabbable -->
-      
-    </div>
-    <div class="span4">
-      <h3 id="pills">Pills</h3>
-      <ul class="nav nav-pills">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-        <li class="disabled"><a href="#">Disabled link</a></li>
-      </ul>
-    </div>
-    
-    <div class="span4">
-      
-      <h3 id="list">Lists</h3>
-        
-      <div class="well" style="padding: 8px 0;">
-        <ul class="nav nav-list">
-          <li class="nav-header">List header</li>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Library</a></li>
-          <li><a href="#">Applications</a></li>
-          <li class="nav-header">Another list header</li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-<!-- Labels
-================================================== -->
-
-  <div class="row">
-    <div class="span6">
-      <h3 id="labels">Labels</h3>
-      <span class="label">Default</span>
-      <span class="label label-success">Success</span>
-      <span class="label label-warning">Warning</span>
-      <span class="label label-important">Important</span>
-      <span class="label label-info">Info</span>
-      <span class="label label-inverse">Inverse</span>
-    </div>
-    <div class="span6">
-      <h3 id="badges">Badges</h3>
-      <span class="badge">Default</span>
-      <span class="badge badge-success">Success</span>
-      <span class="badge badge-warning">Warning</span>
-      <span class="badge badge-important">Important</span>
-      <span class="badge badge-info">Info</span>
-      <span class="badge badge-inverse">Inverse</span>
-    </div>
-  </div>
-	<br />
-
-<!-- Progress bars
-================================================== -->
-
-
-  <h3 id="progressbars">Progress bars</h3>
-
-  <div class="row">
-    <div class="span4">
-      <div class="progress">
-        <div class="bar" style="width: 60%;"></div>
-      </div>
-    </div>
-    <div class="span4">
-      <div class="progress progress-info progress-striped">
-        <div class="bar" style="width: 20%;"></div>
-      </div>
-    </div>
-    <div class="span4">
-      <div class="progress progress-danger progress-striped active">
-        <div class="bar" style="width: 45%"></div>
-      </div>
-    </div>
-  </div>
-	<br />
-
-
-<!-- Alerts & Messages
-================================================== -->
-
-
-  <h3 id="alerts">Alerts</h3>
-
-  <div class="row">
-	  <div class="span12">
-	      <div class="alert alert-block">
-	        <a class="close">&times;</a>
-	        <h4 class="alert-heading">Alert block</h4>
-	        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-	      </div>
-	  </div>
-  </div>
-  <div class="row">
-    <div class="span4">
-      <div class="alert alert-error">
-        <a class="close">&times;</a>
-        <strong>Error</strong> Change a few things up and try submitting again.
-      </div>
-    </div>
-    <div class="span4">
-      <div class="alert alert-success">
-        <a class="close">&times;</a>
-        <strong>Success</strong> You successfully read this important alert message.
-      </div>
-    </div>
-    <div class="span4">
-      <div class="alert alert-info">
-        <a class="close">&times;</a>
-        <strong>Information</strong> This alert needs your attention, but it's not super important.
-      </div>
-    </div>
-  </div>
-
 
 </section>
 
