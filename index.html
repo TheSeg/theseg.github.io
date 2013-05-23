@@ -16,6 +16,7 @@
   <script src="js/jquery.smooth-scroll.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootswatch.js"></script>
+  <script src="js/seg_resume.min.js"></script>
 </head>
 <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
 
@@ -259,18 +260,23 @@
     <h1>Released Titles &amp; Rolls</h1>
   </div>
   
-  <table class="table table-bordered table-striped table-hover">
+  <table id="releasedTitlesTable" class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
         <th>Franchise</th>
         <th>Release Dates</th>
         <th>Rolls</th>
-        <th>Platforms</th>
+        <th><div class="platform-win"></div></th>
+        <th><div class="platform-macosx"></div></th>
+        <th><div class="platform-xbox360"></div></th>
+        <th><div class="platform-ps3"></div></th>
+        <th><div class="platform-wii"></div></th>
+        <th><div class="platform-ios"></div></th>
       </tr>
     </thead>
     <tfoot>
       <tr>
-        <td colspan="4">
+        <td colspan="9">
           <ul class="unstyled">
             <li>All releases include Steam and Steamworks distribution.</li>
             <li>* Unreleased on platform.</li>
@@ -289,7 +295,12 @@
             <li>Xbox 360 Release Specialist</li>
           </ul>
         </td>
-        <td>Xbox 360, PlayStation 3, Windows, Mac OS X, iOS</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Jurassic Park: The Game</td>
@@ -300,7 +311,12 @@
             <li>Xbox 360 Release Specialist</li>
           </ul>
         </td>
-        <td>Xbox 360, PlayStation 3, Windows, Mac OS X, iOS</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Nelson Tethers: Puzzle Agent 2</td>
@@ -312,7 +328,12 @@
             <li>Writer</li>
           </ul>
         </td>
-        <td>PlayStation 3, Windows, Mac OS X, iOS</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Back To The Future: The Game</td>
@@ -323,7 +344,12 @@
             <li>Steamworks Integration</li>
           </ul>
         </td>
-        <td>PlayStation 3, Windows, Mac OS X, iOS</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Nelson Tethers: Puzzle Agent</td>
@@ -334,7 +360,12 @@
             <li>Content Programmer</li>
           </ul>
         </td>
-        <td>PlayStation 3, Windows, Mac OS X, iOS, WiiWare*</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-ok-circle icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Poker Night at the Inventory</td>
@@ -344,7 +375,12 @@
             <li>Steamworks Integration</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
       <tr>
         <td>Sam &amp; Max: Save the World <small>(Season 1)</small></td>
@@ -357,7 +393,12 @@
             <li>Build &amp; Distribution Engineering</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, Xbox 360, PlayStation 3, Wii</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
       <tr>
         <td>Sam &amp; Max: Beyond Time &amp; Space <small>(Season 2)</small></td>
@@ -380,7 +421,12 @@
             </li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, Xbox 360, PlayStation 3, Wii</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Sam &amp; Max: The Devil's Playhouse <small>(Season 3)</small></td>
@@ -391,7 +437,12 @@
             <li>Build &amp; Distribution Engineering</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Strong Bad’s Cool Game for Attractive People</td>
@@ -403,7 +454,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Tales of Monkey Island</td>
@@ -415,7 +471,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
       </tr>
       <tr>
         <td>Wallace &amp; Gromit's Grand Adventures</td>
@@ -427,7 +488,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
       <tr>
         <td>CSI: Crime Scene Investigation - Hard Evidence</td>
@@ -439,7 +505,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
       <tr>
         <td>CSI: Crime Scene Investigation - Deadly Intent</td>
@@ -451,7 +522,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
       <tr>
         <td>CSI: Crime Scene Investigation - Fatal Conspiracy</td>
@@ -463,7 +539,12 @@
             <li>Wii Menu Animation</li>
           </ul>
         </td>
-        <td>Windows, Mac OS X, PlayStation 3</td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-sign icon-2x"></i></td>
+        <td><i class="icon-check-empty icon-2x"></i></td>
       </tr>
     </tbody>
   </table>
