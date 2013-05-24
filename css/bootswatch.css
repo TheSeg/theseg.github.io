@@ -1,6 +1,6 @@
 section {
-	margin-top: 60px;
-	padding-top: 100px;
+	margin-top: 40px;
+	padding-top: 20px;
 }
 
 /* index */
@@ -125,12 +125,6 @@ section {
 
 .links > a {
 	margin-right: 10px;
-}
-
-.bsa {
-	float: right;
-	max-width: 400px;
-	padding: 0;
 }
 
 body .one .bsa_it_ad {
