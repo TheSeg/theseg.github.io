@@ -38,4 +38,9 @@ $(document).ready(function() {
         'html':true,
         'title':"iOS<br>iPhone &amp; iPad",
     });
+    $(".note-local").tooltip({
+        'placement':'bottom',
+        'html':true,
+        'title':"Includes localizations and/or ports developed after initial release.",
+    });
 });
