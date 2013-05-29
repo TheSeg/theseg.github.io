@@ -38,6 +38,11 @@ $(document).ready(function() {
         'html':true,
         'title':"iOS<br>iPhone &amp; iPad",
     });
+    $(".platform-steam").tooltip({
+        'placement':'bottom',
+        'html':true,
+        'title':"Steam &amp; Steamworks<br>for Windows &amp; Mac OS X",
+    });
     $(".note-local").tooltip({
         'placement':'bottom',
         'html':true,
