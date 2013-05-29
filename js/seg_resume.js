@@ -88,6 +88,13 @@ $(document).ready(function() {
         'html':true,
         'title':"Includes localizations and/or ports developed after initial release.",
     });
+    // Do tooltips for each title.
+    $(".title-image").each( function() {
+        $(this).tooltip({
+            'placement':'right',
+            'html':true,
+        });
+    });
     load_Twitter();
     load_GooglePlus();
     load_Facebook();
