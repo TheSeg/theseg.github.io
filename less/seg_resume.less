@@ -10,6 +10,24 @@ table td.cell-center {
 
 /* hero-unit */
 
+@media screen {
+  .only-print {
+    display:none;
+  }
+}
+
+@media print {
+  .only-screen {
+    display:none;
+  }
+  .hero-unit {
+    display:none;
+  }
+  #navigation {
+    display:none;
+  }
+}
+
 .hero-unit {
   .border-radius(0, 5px, 5px, 0);
   background:#000 url('../img/main_banner.jpg') no-repeat;
