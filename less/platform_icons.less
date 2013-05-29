@@ -6,40 +6,75 @@
   speak: none;
 }
 
+.platform-not {
+  opacity:1;
+}
+.platform-unreleased {
+  opacity:0.75;
+}
+
 .platform-win {
   background: url('../img/platform_icons.png') no-repeat -1px -166px;
   width: 24px;
   height: 25px;
+  &.platform-not {
+    background-position:-27px -166px;
+  }
 }
 .platform-macosx {
   background: url('../img/platform_icons.png') no-repeat -1px -192px;
   width: 24px;
   height: 29px;
+  &.platform-not {
+    background-position:-27px -192px;
+  }
+}
+.platform-mac {
+  // Alias.
+  .platform-macosx;
 }
 .platform-xbox360 {
   background: url('../img/platform_icons.png') no-repeat -1px -1px;
   width: 19px;
   height: 32px;
+  &.platform-not {
+    background-position:-27px -1px;
+  }
 }
 .platform-wii {
   background: url('../img/platform_icons.png') no-repeat -1px -34px;
   width: 23px;
   height: 32px;
+  &.platform-not {
+    background-position:-27px -34px;
+  }
+  &.platform-unreleased {
+    background-position:-53px -34px;
+  }
 }
 .platform-ps3 {
   background: url('../img/platform_icons.png') no-repeat -1px -67px;
   width: 24px;
   height: 32px;
+  &.platform-not {
+    background-position:-27px -67px;
+  }
 }
 .platform-ps3-slim {
   background: url('../img/platform_icons.png') no-repeat -1px -100px;
   width: 23px;
   height: 32px;
+  &.platform-not {
+    background-position:-27px -100px;
+  }
 }
 .platform-ios {
   background: url('../img/platform_icons.png') no-repeat -1px -133px;
   width: 20px;
   height: 32px;
+  &.platform-not {
+    background-position:-27px -133px;
+  }
 }
 
 

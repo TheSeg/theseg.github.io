@@ -3,17 +3,17 @@
 */
 
 $(document).ready(function() {
-    $("#releasedTitlesTable .icon-ok-circle").tooltip({
+    $(".platform-wii.platform-unreleased").tooltip({
         'placement':'bottom',
         'html':true,
-        'title':"Unreleased on this platform.",
+        'title':"Developed for but not released on Nintendo Wii.",
     });
     $(".platform-win").tooltip({
         'placement':'bottom',
         'html':true,
         'title':"Microsoft Windows<br>Self publish, Steam, &amp; Retail Disc",
     });
-    $(".platform-macosx").tooltip({
+    $(".platform-macosx, .platform-mac").tooltip({
         'placement':'bottom',
         'html':true,
         'title':"Mac OS X<br>Self publish, Steam, &amp; Retail Disc",
