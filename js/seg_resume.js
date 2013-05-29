@@ -41,6 +41,18 @@ function load_Twitter() {
         }
     })(document,"script","twitter-wjs");
 }
+function load_LinkedIn() {
+    // LinkedIn
+    (function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src="//platform.linkedin.com/in.js";
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    })(document,"script","linkedin-wjs");
+}
 
 $(document).ready(function() {
     $(".platform-wii.platform-unreleased").tooltip({
@@ -98,4 +110,5 @@ $(document).ready(function() {
     load_Twitter();
     load_GooglePlus();
     load_Facebook();
+    load_LinkedIn();
 });
