@@ -5,9 +5,17 @@
 
 body {}
 
+section {
+  page-break-before:always;
+}
 table td.cell-center {
   text-align:center;
 }
+table { page-break-inside:auto; }
+tr    { page-break-inside:avoid; page-break-after:auto; }
+thead { display:table-header-group; }
+tfoot { display:table-footer-group; }
+
 
 @media screen {
   .only-print {
