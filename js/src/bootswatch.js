@@ -1,11 +1,3 @@
-$('a[rel=tooltip]').tooltip({
-	'placement': 'bottom'
-});
-
-
-$('.navbar a, .subnav a').smoothScroll();
-
-
 (function ($) {
 
 	$(function(){
