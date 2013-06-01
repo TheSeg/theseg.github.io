@@ -126,12 +126,16 @@ tfoot { display:table-footer-group; }
 /* skills */
 #skills {
   .list_col {
-    .columns(100px,3,20px);
+    .columns(140px,3,20px,#ccc);
     margin-top:2px;
     margin-bottom:2px;
-  }
-  ul li{
-    .column-break-inside(avoid);
+    li {
+      list-style-type:none;
+      .column-break-inside(avoid);
+      li {
+        list-style-type:circle;
+      }
+    }
   }
 }
 
