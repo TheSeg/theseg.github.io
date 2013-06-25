@@ -3,6 +3,8 @@
 @import "elements.less";
 @import "seg_mixins.less";
 
+@darkCyan:#2c3e50;
+
 body {}
 
 section {
@@ -115,7 +117,7 @@ tfoot { display:table-footer-group; }
   blockquote {
     text-align:left;
     small {
-      color:lighten(greyscale(#2c3e50),25%);
+      color:lighten(greyscale(@darkCyan),25%);
     }
   }
   .featured-icon {
