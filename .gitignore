@@ -1,3 +1,6 @@
 # OS Junk Files
 .DS_Store
 Thumbs.db
+
+# Jekyll Ignores
+_site/
