@@ -2,4 +2,3 @@ safe: true
 lsi: false
 pygments: true
 timezone: America/Los_Angeles
-exclude: [less/, js/src/]
