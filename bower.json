@@ -1,0 +1,18 @@
+{
+    "name": "theseg.github.io",
+    "version": "1.2.1",
+    "description": "Resume website for John 'Seg' Seggerson.",
+    "homepage": "http://theseg.github.io/",
+    "bugs": "https://github.com/TheSeg/theseg.github.io/issues",
+    "author": {
+        "name": "John 'Seg' Seggerson",
+        "url": "http://theseg.github.io"
+    },
+    "dependencies": {
+        "jquery": "latest",
+        "font-awesome": "latest",
+        "holderjs": "latest",
+        "html5shiv": "latest",
+        "bootstrap": "2.3.2"
+    }
+}
