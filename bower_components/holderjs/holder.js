@@ -79,7 +79,7 @@ function render(mode, el, holder, src) {
 		theme = holder.theme,
 		text = holder.text ? decodeURIComponent(holder.text) : holder.text;
 	var dimensions_caption = dimensions.width + "x" + dimensions.height;
-
+		
 	theme = (text ? extend(theme, {
 		text: text
 	}) : theme);
@@ -221,7 +221,7 @@ if (!canvas.getContext) {
 }
 
 var dpr = 1, bsr = 1;
-
+	
 if(!fallback){
     dpr = window.devicePixelRatio || 1,
     bsr = ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1;
@@ -332,7 +332,7 @@ app.add_image = function (src, el) {
 app.run = function (o) {
 	var options = extend(settings, o),
 	    images = [], imageNodes = [], bgnodes = [];
-
+	    
 	if(typeof(options.images) == "string"){
 	    imageNodes = selector(options.images);
 	}
@@ -344,7 +344,7 @@ app.run = function (o) {
 
 	if(typeof(options.bgnodes) == "string"){
 	    bgnodes = selector(options.bgnodes);
-	} else if (window.NodeList && options.elements instanceof window.NodeList) {
+	} else	if (window.NodeList && options.elements instanceof window.NodeList) {
 		bgnodes = options.bgnodes;
 	} else if (window.Node && options.bgnodes instanceof window.Node) {
 		bgnodes = [options.bgnodes];
@@ -355,22 +355,24 @@ app.run = function (o) {
 	for (i = 0, l = imageNodes.length; i < l; i++) images.push(imageNodes[i]);
 
 	var holdercss = document.getElementById("holderjs-style");
+
 	if (!holdercss) {
 		holdercss = document.createElement("style");
 		holdercss.setAttribute("id", "holderjs-style");
 		holdercss.type = "text/css";
 		document.getElementsByTagName("head")[0].appendChild(holdercss);
 	}
-
-	if (!options.nocss) {
-	    if (holdercss.styleSheet) {
-		    holdercss.styleSheet.cssText += options.stylesheet;
-	    } else {
-		    holdercss.appendChild(document.createTextNode(options.stylesheet));
-	    }
+	else{
+	    if (!options.nocss) {
+		if (holdercss.styleSheet) {
+			holdercss.styleSheet +=	options.stylesheet;
+		} else {
+			holdercss.textContent += options.stylesheet;
+		}
+	}
 	}
 
-
+	
 
 	var cssregex = new RegExp(options.domain + "\/(.*?)\"?\\)");
 
@@ -378,38 +380,29 @@ app.run = function (o) {
 		var src = window.getComputedStyle(bgnodes[i], null)
 			.getPropertyValue("background-image");
 		var flags = src.match(cssregex);
-		var bgsrc = bgnodes[i].getAttribute("data-background-src");
-
 		if (flags) {
 			var holder = parse_flags(flags[1].split("/"), options);
 			if (holder) {
 				render("background", bgnodes[i], holder, src);
 			}
 		}
-		else if(bgsrc != null){
-		    var holder = parse_flags(bgsrc.substr(bgsrc.lastIndexOf(options.domain) + options.domain.length + 1)
-				.split("/"), options);
-		    if(holder){
-			render("background", bgnodes[i], holder, src);
-		    }
-		}
 	}
 
 	for (l = images.length, i = 0; i < l; i++) {
-
+	    
 		var attr_src = attr_data_src = src = null;
-
+		
 		try{
 		    attr_src = images[i].getAttribute("src");
 		    attr_datasrc = images[i].getAttribute("data-src");
 		}catch(e){}
-
+				
 		if (attr_datasrc == null && !! attr_src && attr_src.indexOf(options.domain) >= 0) {
 			src = attr_src;
 		} else if ( !! attr_datasrc && attr_datasrc.indexOf(options.domain) >= 0) {
 			src = attr_datasrc;
 		}
-
+		
 		if (src) {
 			var holder = parse_flags(src.substr(src.lastIndexOf(options.domain) + options.domain.length + 1)
 				.split("/"), options);
