@@ -4,3 +4,4 @@ Thumbs.db
 
 # Jekyll Ignores
 _site/
+codekit-config.json
