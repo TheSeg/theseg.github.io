@@ -2,6 +2,7 @@
 pages:
  - name: Home
    url:  
+theme: flatly
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,11 @@ pages:
 <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
 <div id='fb-root'></div>
 {% include navbar.html %}
+<div class="container">
 {{ content }}
+{% include footer.html %}
+{% include post-javascript.html %}
+</div>
 </body>
 </html>
 <!-- Generated: {{ site.time | date: "%m/%d/%Y %T" }} -->

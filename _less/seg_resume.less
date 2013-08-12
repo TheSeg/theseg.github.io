@@ -10,9 +10,21 @@
 @import "elements.less";
 @import "seg_mixins.less";
 
-@darkCyan:#2c3e50;
-
-body {}
+body{
+  padding-top:51px;
+  @media (max-width:979px) {
+    padding-top:0;
+  }
+}
+footer {
+  margin-bottom: 20px;
+  .links {
+    margin-bottom:20px;
+    a {
+      margin-right:10px;
+    }
+  }
+}
 
 section {
   page-break-before:always;
@@ -35,7 +47,7 @@ tfoot { display:table-footer-group; }
   .only-screen {
     display:none;
   }
-  .hero-unit {
+  .hero-unit,.hero-unit2 {
     display:none;
   }
   #navigation {
@@ -123,7 +135,7 @@ tfoot { display:table-footer-group; }
   blockquote {
     text-align:left;
     small {
-      color:lighten(greyscale(@darkCyan),25%);
+      color:lighten(greyscale(@textColor),25%);
     }
   }
   .featured-icon {
