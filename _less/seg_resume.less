@@ -75,35 +75,36 @@ table {
 
 /* hero-unit */
 
-.hero-unit2 {
+.jumbotron {
   .border-radius(0, 5px, 5px, 0);
   position: relative;
   background:#000 url('../img/main_banner.jpg') no-repeat right;
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding-left:0 !important;
+  padding-right:0 !important;
   color:#fff;
   text-align:left;
   height:315px;
   border-width:0px;
-  .inner-shadow(0,0px,22px,1);
+  .inner-shadow(0,0,22px,1);
   .text-unit {
     position:absolute;
-    bottom:0px;
-    margin:0px;
-    padding:6px 0px 6px 0px;
+    bottom:0;
+    margin:0;
+    padding:6px 0 6px 0;
     width:100%;
-    .bg_gradient(rgba(44, 62, 80, 1),rgba(44, 62, 80, .2));
+    .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , .2 ) );
     .border-radius(0, 5px, 5px, 0);
     h1 {
-      padding:0px 0px 0px 10px;
-      margin:0px;
+      padding:0 0 0 10px;
+      margin:0;
       text-shadow: 2px 2px 5px #000;
     }
     p.lead {
       text-shadow: 2px 2px 5px #000;
-      padding:4px 0px 0px 10px;
-      margin:0px;
-      color:lighten(color("#1abc9c"),50%);
+      padding:4px 0 0 10px;
+      margin:0;
+      color:contrast( @navbar-default-bg , #000 , #ccc );
     }
   }
 }
