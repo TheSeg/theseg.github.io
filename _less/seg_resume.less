@@ -11,10 +11,6 @@
 @import "seg_mixins.less";
 
 body{
-  padding-top:51px;
-  @media (max-width:979px) {
-    padding-top:0;
-  }
 }
 footer {
   margin-bottom: 20px;
@@ -76,9 +72,9 @@ table {
 /* hero-unit */
 
 .jumbotron {
-  .border-radius(0, 5px, 5px, 0);
   position: relative;
   background:#000 url('../img/main_banner.jpg') no-repeat right;
+  background-size:cover;
   margin:0;
   padding-left:0 !important;
   padding-right:0 !important;
@@ -94,7 +90,7 @@ table {
     padding:6px 0 6px 0;
     width:100%;
     .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , .2 ) );
-    .border-radius(0, 5px, 5px, 0);
+    .border-bottom-radius(@border-radius-large);
     h1 {
       padding:0 0 0 10px;
       margin:0;
