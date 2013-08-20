@@ -29,13 +29,21 @@ footer {
 section {
   page-break-before:always;
 }
-table td.cell-center {
-  text-align:center;
+table {
+  page-break-inside:auto;
+  tr {
+    page-break-inside:avoid; page-break-after:auto;
+  }
+  td.cell-center {
+    text-align:center;
+  }
+  thead {
+    display:table-header-group;
+  }
+  tfoot {
+    display:table-footer-group;
+  }
 }
-table { page-break-inside:auto; }
-tr    { page-break-inside:avoid; page-break-after:auto; }
-thead { display:table-header-group; }
-tfoot { display:table-footer-group; }
 
 @media screen {
   .only-print {
@@ -60,11 +68,9 @@ tfoot { display:table-footer-group; }
 }
 
 /* Top Header */
-.navbar-inner{
-  .brand {
-    font-weight:bold;
-    text-shadow:2px 2px 2px #000;
-  }
+.navbar-brand {
+  font-weight:bold;
+  text-shadow:2px 2px 2px #000;
 }
 
 /* hero-unit */
@@ -114,7 +120,7 @@ tfoot { display:table-footer-group; }
 #navigation {
   padding-top:57px;
   margin-top:0px;
-  .nav-pills li.pdf {
+  li.pdf {
     a {
       color:#000;
     }
