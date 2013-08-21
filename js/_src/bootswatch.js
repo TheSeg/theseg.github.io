@@ -18,9 +18,11 @@
       if (scrollTop >= subnavTop && !isFixed) {
         isFixed = 1;
         $nav.addClass('navbar-fixed-top');
+        $("#introduction").addClass('addPadding');
       } else if (scrollTop <= subnavTop && isFixed) {
         isFixed = 0;
         $nav.removeClass('navbar-fixed-top');
+        $("#introduction").removeClass('addPadding');
       }
     }
 
