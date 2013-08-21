@@ -173,9 +173,19 @@ table {
 
 /* #positions */
 #positions {
+  .panel {
+    border-width:0;
+    .box-shadow(0 0 0 rgba(255,255,255,0));
+    .panel-heading {
+      border-width:inherit;
+      .box-shadow(0 1px 1px rgba(0,0,0,.05));
+      border-radius: @panel-border-radius;
+    }
+  }
   .positionInfo {
+    margin:0;
     .company{
-      
+      font-weight:bold;
     }
     .dates{
       font-size:9pt;
