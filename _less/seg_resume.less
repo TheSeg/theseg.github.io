@@ -89,16 +89,20 @@ table {
     margin:0;
     padding:6px 0 6px 10px;
     width:100%;
-    .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , .2 ) );
+    .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , 30% ) );
     .border-bottom-radius(@border-radius-large);
+    @media (max-width: 768px) {
+      padding:6px 0 6px 0;
+      .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , 90% ) );
+    }
     h1 {
-      padding:0 0 0 10px;
+      padding:0 0 0 0;
       margin:0;
       text-shadow: 2px 2px 5px #000;
     }
     p.lead {
       text-shadow: 2px 2px 5px #000;
-      padding:4px 0 0 10px;
+      padding:4px 0 0 0;
       margin:0;
       color:contrast( @navbar-default-bg , #000 , #ccc );
     }
