@@ -107,9 +107,15 @@ table {
 
 /* overview */
 #overview {
-  li {
-    font-size:13pt;
-    padding-bottom:6px;
+  @overview-font-size:12pt;
+  @overview-icon-size:12pt;
+  li, a {
+    font-size:@overview-font-size;
+  }
+  span {
+    text-align:center;
+    font-size:@overview-icon-size;
+    width:@overview-icon-size;
   }
 }
 
