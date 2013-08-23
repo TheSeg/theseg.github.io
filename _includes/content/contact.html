@@ -51,6 +51,62 @@
     <div class="col-md-4">
       <div class="panel panel-primary">
         <div class="panel-heading">
+          <h3 class="panel-title">Websites</h3>
+        </div>
+        <div class="list-group">
+          {% if page.layout == "valve" %}
+          <a href="http://steamcommunity.com/id/atrus/" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-user"></i>
+            </span>
+            Steam Community Profile
+          </a>
+          {% endif %}
+          <a href="http://www.linkedin.com/in/johnseggerson/" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-linkedin"></i>
+            </span>
+            LinkedIn Profile
+          </a>
+          <a href="http://www.mobygames.com/developer/sheet/view/developerId,290531/" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-gamepad"></i>
+            </span>
+            MobyGames Developer Profile
+          </a>
+          <a href="http://www.imdb.com/name/nm2980406/" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-film"></i>
+            </span>
+            <acronym title="Internet Movie Database">IMDb</acronym>
+          </a>
+          {% if page.layout != "valve" %}
+          <a href="http://raptr.com/TheSeg/" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-user"></i>
+            </span>
+            Raptr
+          </a>
+          {% endif %}
+          <a href="http://segonmedia.com" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-rss"></i>
+            </span>
+            Seg On Media (Blog)
+          </a>
+          <a href="http://github.com/TheSeg" target="_blank" class="list-group-item">
+            <span class="pull-right">
+              <i class="icon-github"></i>
+            </span>
+            GitHub: TheSeg
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
           <h3 class="panel-title">Contact Info</h3>
         </div>
         <div class="list-group">
@@ -96,12 +152,6 @@ while(x=eval(x));
             </span>
             (415) 742-1SEG
           </a>
-          <a href="skype://johnseggerson?chat" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-li icon-skype"></i>
-            </span>
-            Skype
-          </a>
           <a href="https://plus.google.com/113283982336373378707?rel=author" target="_blank" class="list-group-item">
             <span class="pull-right">
               <i class="icon-li icon-google-plus-sign"></i>
@@ -120,61 +170,11 @@ while(x=eval(x));
             </span>
             @TheSeg
           </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Websites</h3>
-        </div>
-        <div class="list-group">
-          {% if page.layout == "valve" %}
-          <a href="http://steamcommunity.com/id/atrus/" target="_blank" class="list-group-item">
+          <a href="skype:johnseggerson?call" class="list-group-item">
             <span class="pull-right">
-              <i class="icon-user"></i>
+              <i class="icon-li icon-skype"></i>
             </span>
-            Steam Community Profile
-          </a>
-          {% endif %}
-          <a href="http://www.linkedin.com/in/johnseggerson/" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-linkedin"></i>
-            </span>
-            LinkedIn Profile
-          </a>
-          <a href="http://www.mobygames.com/developer/sheet/view/developerId,290531/" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-gamepad"></i>
-            </span>
-            MobyGames Developer Profile
-          </a>
-          <a href="http://www.imdb.com/name/nm2980406/" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-film"></i>
-            </span>
-            <acronym title="Internet Movie Database">IMDb</acronym>
-          </a>
-          {% if plage.layout != "valve" %}
-          <a href="http://raptr.com/TheSeg/" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-user"></i>
-            </span>
-            Raptr
-          </a>
-          {% endif %}
-          <a href="http://segonmedia.com" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-rss"></i>
-            </span>
-            Seg On Media (Blog)
-          </a>
-          <a href="http://github.com/TheSeg" target="_blank" class="list-group-item">
-            <span class="pull-right">
-              <i class="icon-github"></i>
-            </span>
-            GitHub: TheSeg
+            Skype: JohnSeggerson
           </a>
         </div>
       </div>
