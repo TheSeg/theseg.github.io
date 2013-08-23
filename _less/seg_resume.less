@@ -83,6 +83,7 @@ table {
   height:315px;
   border-width:0px;
   .inner-shadow(0,0,22px,1);
+  .border-radius(0);
   .text-unit {
     position:absolute;
     bottom:0;
@@ -90,7 +91,6 @@ table {
     padding:6px 0 6px 10px;
     width:100%;
     .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , 30% ) );
-    .border-bottom-radius(@border-radius-large);
     @media (max-width: 768px) {
       padding:6px 0 6px 0;
       .bg_gradient( @navbar-default-bg , fade( @navbar-default-bg , 90% ) );
@@ -125,8 +125,12 @@ table {
 
 /* navigation */
 #navigation {
-  padding-top:57px;
-  margin-top:0px;
+  padding-top:0;
+  margin-top:0;
+  text-shadow:1pt 1pt 1pt #000;
+  .navbar {
+    .border-top-radius(0);
+  }
   li.pdf {
     color:@btn-warning-color;
     a {
@@ -139,8 +143,9 @@ table {
 
 #introduction {
   text-align:center;
+  margin-top:0px;
   &.addPadding {
-    margin-top:80px;
+    margin-top:120px;
   }
   blockquote {
     text-align:left;
