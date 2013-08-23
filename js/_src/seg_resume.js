@@ -108,14 +108,14 @@ $(document).ready(function() {
         });
     });
     
-    $('.nav-pills a, .toTop').click(function(){
+    $('.navbar-nav a, .toTop').click(function(){
         var scrollTo = 0;
         if ( $.attr(this, 'href') === "#introduction") {
-            scrollTo = ($( "#navigation" ).offset().top)-30;
+            scrollTo = ($( "#navigation" ).offset().top)+10;
         } else if ( $.attr(this, 'href') === "#top") {
             scrollTo = 0;
         } else {
-            scrollTo = (($( $.attr(this, 'href') ).offset().top)-70);
+            scrollTo = (($( $.attr(this, 'href') ).offset().top)-30);
         }
         $('html, body').animate({
             scrollTop: scrollTo

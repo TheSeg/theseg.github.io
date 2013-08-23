@@ -11,10 +11,6 @@
 @import "seg_mixins.less";
 
 body{
-  padding-top:51px;
-  @media (max-width:979px) {
-    padding-top:0;
-  }
 }
 footer {
   margin-bottom: 20px;
@@ -29,13 +25,21 @@ footer {
 section {
   page-break-before:always;
 }
-table td.cell-center {
-  text-align:center;
+table {
+  page-break-inside:auto;
+  tr {
+    page-break-inside:avoid; page-break-after:auto;
+  }
+  td.cell-center {
+    text-align:center;
+  }
+  thead {
+    display:table-header-group;
+  }
+  tfoot {
+    display:table-footer-group;
+  }
 }
-table { page-break-inside:auto; }
-tr    { page-break-inside:avoid; page-break-after:auto; }
-thead { display:table-header-group; }
-tfoot { display:table-footer-group; }
 
 @media screen {
   .only-print {
@@ -60,70 +64,101 @@ tfoot { display:table-footer-group; }
 }
 
 /* Top Header */
-.navbar-inner{
-  .brand {
-    font-weight:bold;
-    text-shadow:2px 2px 2px #000;
-  }
+.navbar-brand {
+  font-weight:bold;
+  text-shadow:2px 2px 2px #000;
 }
 
 /* hero-unit */
 
-.hero-unit2 {
-  .border-radius(0, 5px, 5px, 0);
+.jumbotron {
   position: relative;
-  background:#000 url('../img/main_banner.jpg') no-repeat right;
-  margin:0px;
-  padding:0px;
+  background-color:#000;
+  background-image: url('../img/main_banner.jpg');
+  background-repeat: no-repeat;
+  background-position: 10% 60%;
+  background-size:cover;
+  margin:0;
+  padding-left:0 !important;
+  padding-right:0 !important;
   color:#fff;
   text-align:left;
   height:315px;
   border-width:0px;
-  .inner-shadow(0,0px,22px,1);
+  .inner-shadow(0,0,22px,1);
+  .border-radius(0);
   .text-unit {
     position:absolute;
-    bottom:0px;
-    margin:0px;
-    padding:6px 0px 6px 0px;
+    bottom:0;
+    margin:0;
+    padding:6px 0 6px 10px;
     width:100%;
-    .bg_gradient(rgba(44, 62, 80, 1),rgba(44, 62, 80, .2));
-    .border-radius(0, 5px, 5px, 0);
+    #gradient > .vertical( fade( @navbar-default-bg , 0% ) , @navbar-default-bg , 0% , 90% );
+    @media (max-width: 768px) {
+      padding:6px 0 6px 0;
+    }
     h1 {
-      padding:0px 0px 0px 10px;
-      margin:0px;
+      padding:0;
+      margin:0;
       text-shadow: 2px 2px 5px #000;
     }
     p.lead {
       text-shadow: 2px 2px 5px #000;
-      padding:4px 0px 0px 10px;
-      margin:0px;
-      color:lighten(color("#1abc9c"),50%);
+      padding:4px 0 0 0;
+      margin:0;
+      color:lighten( @brand-danger , 10% );
     }
   }
 }
 
 /* overview */
 #overview {
-  li {
-    font-size:13pt;
-    padding-bottom:6px;
+  @overview-font-size:12pt;
+  @overview-icon-size:12pt;
+  li, a {
+    font-size:@overview-font-size;
+  }
+  span {
+    text-align:center;
+    font-size:@overview-icon-size;
+    width:@overview-icon-size;
   }
 }
 
 /* navigation */
 #navigation {
-  padding-top:57px;
-  margin-top:0px;
-  .nav-pills li.pdf {
-    a {
-      color:#000;
-    }
-    font-size:12pt;
-    &:hover {
-      a {
-        background-color:#f4a425;
+  @navigation-radius:10px;
+  padding-top:0;
+  margin-top:0;
+  text-shadow:1pt 1pt 1pt #000;
+  .navbar {
+    .border-top-radius(0);
+    .border-bottom-radius(@navigation-radius);
+    border-width:0;
+  }
+  .navbar-nav {
+    margin-bottom:0;
+  }
+  .navbar-fixed-top {
+    li.pdf {
+      &.btn-warning {
+        background-color:@btn-warning-bg;
       }
-      transition: none;
+    }
+  }
+  li.pdf {
+    color:@btn-warning-color;
+    a {
+      color:@btn-warning-color;
+    }
+    @media (min-width: 769px) {
+      &.btn-warning {
+        background-color:transparent;
+        #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
+      }
+    }
+    @media (max-width: 768px) {
+      .border-bottom-radius(@navigation-radius);
     }
   }
 }
@@ -132,10 +167,14 @@ tfoot { display:table-footer-group; }
 
 #introduction {
   text-align:center;
+  margin-top:0px;
+  &.addPadding {
+    margin-top:120px;
+  }
   blockquote {
     text-align:left;
     small {
-      color:lighten(greyscale(@textColor),25%);
+      color:lighten(greyscale(@text-color),25%);
     }
   }
   .featured-icon {
@@ -164,9 +203,19 @@ tfoot { display:table-footer-group; }
 
 /* #positions */
 #positions {
+  .panel {
+    border-width:0;
+    .box-shadow(0 0 0 rgba(255,255,255,0));
+    .panel-heading {
+      border-width:inherit;
+      .box-shadow(0 1px 1px rgba(0,0,0,.05));
+      border-radius: @panel-border-radius;
+    }
+  }
   .positionInfo {
+    margin:0;
     .company{
-      
+      font-weight:bold;
     }
     .dates{
       font-size:9pt;

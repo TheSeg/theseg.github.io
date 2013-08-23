@@ -13,6 +13,7 @@
         "font-awesome": "latest",
         "holderjs": "latest",
         "html5shiv": "latest",
-        "bootstrap": "2.3.2"
+        "bootstrap": ">= 3.0.0",
+        "respond": "latest"
     }
 }

@@ -5,30 +5,32 @@
     // fix sub nav on scroll
     var $win = $(window),
         $body = $('body'),
-        $nav = $('.subnav'),
-        navHeight = $('.navbar').first().height(),
-        subnavHeight = $('.subnav').first().height(),
-        subnavTop = $('.subnav').length && $('.subnav').offset().top - navHeight,
-        marginTop = parseInt($body.css('margin-top'), 10);
+        $nav = $('.navbar'),
+        navHeight = 0,
+        subnavHeight = $('.navbar').first().height(),
+        subnavTop = $('.navbar').length && $('.navbar').offset().top - navHeight,
+        marginTop = parseInt($body.css('margin-top'), 10),
         isFixed = 0;
-
-    processScroll();
-
-    $win.on('scroll', processScroll);
 
     function processScroll() {
       var i, scrollTop = $win.scrollTop();
 
       if (scrollTop >= subnavTop && !isFixed) {
         isFixed = 1;
-        $nav.addClass('subnav-fixed');
-        $body.css('margin-top', marginTop + subnavHeight + 'px');
+        if ( $(window).width() >= 992 ) {
+            $nav.addClass('navbar-fixed-top');
+            $("#introduction").addClass('addPadding');
+        }
       } else if (scrollTop <= subnavTop && isFixed) {
         isFixed = 0;
-        $nav.removeClass('subnav-fixed');
-        $body.css('margin-top', marginTop + 'px');
+        $nav.removeClass('navbar-fixed-top');
+        $("#introduction").removeClass('addPadding');
       }
     }
+
+    processScroll();
+
+    $win.on('scroll', processScroll);
 
   });
 
