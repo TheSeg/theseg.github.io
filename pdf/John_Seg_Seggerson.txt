@@ -35,7 +35,7 @@ Lua, JavaScript, Dialog Systems, PHP, Python, Ruby (Ruby on Rails), Unity, ColdF
 
 * Event planning and management.
 
-* Development and Submissions for these platforms:
+* Development and Submissions:
 Windows, Mac OS X, Steam (with Steamworks), Xbox 360 & XBLA, PlayStation 3 & PSN, iOS
 
 
