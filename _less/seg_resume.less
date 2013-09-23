@@ -9,6 +9,9 @@
 @import "platform_icons.less";
 @import "elements.less";
 @import "seg_mixins.less";
+@overview-font-size:12pt;
+@overview-icon-size:12pt;
+@introduction-font-size:12pt;
 
 body{
 }
@@ -39,6 +42,13 @@ table {
   tfoot {
     display:table-footer-group;
   }
+}
+
+.amp-fancy {
+	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+	font-style: italic;
+	font-weight: normal;
+	//font-size: ( @overview-font-size + 20pt );
 }
 
 @media screen {
@@ -113,8 +123,6 @@ table {
 
 /* overview */
 #overview {
-  @overview-font-size:12pt;
-  @overview-icon-size:12pt;
   li, a {
     font-size:@overview-font-size;
   }
@@ -166,23 +174,29 @@ table {
 /* introduction */
 
 #introduction {
-  text-align:center;
-  margin-top:0px;
-  &.addPadding {
-    margin-top:120px;
-  }
-  blockquote {
-    text-align:left;
-    small {
-      color:lighten(greyscale(@text-color),25%);
-    }
-  }
-  .featured-icon {
-    font-size:60pt;
-  }
-  .featured-icon-small {
-    font-size:43pt;
-  }
+	text-align:center;
+	margin-top:0px;
+	&.addPadding {
+		margin-top:120px;
+	}
+	.introduction-block {
+		text-align:center;
+		h2 {
+			font-size:30pt;
+		}
+		blockquote {
+			text-align:left;
+			small {
+				color:lighten(greyscale(@text-color),25%);
+			}
+		}
+		.featured-icon {
+			font-size:60pt;
+		}
+		.featured-icon-small {
+			font-size:43pt;
+		}
+	}
 }
 
 /* skills */
