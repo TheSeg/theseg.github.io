@@ -104,7 +104,7 @@ table {
     padding:6px 0 6px 10px;
     width:100%;
     #gradient > .vertical( fade( @navbar-default-bg , 0% ) , @navbar-default-bg , 0% , 90% );
-    @media (max-width: 768px) {
+    @media (max-width: @screen-xs-max) {
       padding:6px 0 6px 0;
     }
     h1 {
@@ -159,13 +159,13 @@ table {
     a {
       color:@btn-warning-color;
     }
-    @media (min-width: 769px) {
+    @media (min-width: @screen-sm) {
       &.btn-warning {
         background-color:transparent;
         #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: @screen-xs-max) {
       .border-bottom-radius(@navigation-radius);
     }
   }
