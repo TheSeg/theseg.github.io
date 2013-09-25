@@ -123,14 +123,21 @@ table {
 
 /* overview */
 #overview {
-  li, a {
-    font-size:@overview-font-size;
-  }
-  span {
-    text-align:center;
-    font-size:@overview-icon-size;
-    width:@overview-icon-size;
-  }
+	.panel-success {
+		color:darken(@brand-success,10%);
+		.seg-icon-item {
+			color:darken(@brand-success,20%);
+		}
+	}
+	li, a {
+		font-size:@overview-font-size;
+	}
+	.seg-icon-item {
+		.pull-right;
+		text-align:center;
+		font-size:@overview-icon-size;
+		width:@overview-icon-size;
+	}
 }
 
 /* navigation */
