@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-1 col-md-offset-2">
+        <div class="platform-win {% if include.win == 0 %}platform-not{% endif %}{% if include.win == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-mac {% if include.mac == 0 %}platform-not{% endif %}{% if include.mac == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-steam {%if include.steam == 0 %}platform-not{% endif %}{% if include.steam == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-xbox360 {%if include.xbox360 == 0 %}platform-not{% endif %}{% if include.xbox360 == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-ps3 {%if include.ps3 == 0 %}platform-not{% endif %}{% if include.ps3 == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-wii {%if include.wii == 0 %}platform-not{% endif %}{% if include.wii == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+    <div class="col-xs-1">
+        <div class="platform-ios {%if include.ios == 0 %}platform-not{% endif %}{% if include.ios == 2 %}platform-unreleased{% endif%}"></div>
+    </div>
+</div>
