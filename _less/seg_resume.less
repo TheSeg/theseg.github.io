@@ -255,9 +255,10 @@ table {
 
 /* #share-footer */
 #share-footer {
-  text-align:center;
-  li {
-    margin:0 10px;
-    min-height:30px;
-  }
+    text-align:center;
+    .share-item {
+        @media (max-width: @screen-xs-max) {
+            margin-bottom:20px;
+        }
+    }
 }
