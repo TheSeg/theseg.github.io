@@ -121,6 +121,37 @@ table {
   }
 }
 
+/* introduction */
+#introduction {
+	text-align:center;
+	margin-top:0px;
+	&.addPadding {
+		margin-top:120px;
+	}
+	.introduction-header-text {
+		font-size:20pt;
+		padding-bottom:40px;
+	}
+	.introduction-block {
+		h2 {
+			font-size:30pt;
+			text-align:left;
+			margin:0 20px 8px 5px;
+			padding-bottom:4px;
+		}
+		blockquote {
+			text-align:left;
+			small {
+				color:lighten(greyscale(@text-color),25%);
+			}
+		}
+		.featured-icon {
+		}
+		.featured-icon-small {
+		}
+	}
+}
+
 /* overview */
 #overview {
 	.panel-success {
@@ -176,38 +207,6 @@ table {
       .border-bottom-radius(@navigation-radius);
     }
   }
-}
-
-/* introduction */
-
-#introduction {
-	text-align:center;
-	margin-top:0px;
-	&.addPadding {
-		margin-top:120px;
-	}
-	.introduction-header-text {
-		font-size:20pt;
-		padding-bottom:40px;
-	}
-	.introduction-block {
-		h2 {
-			font-size:30pt;
-			text-align:left;
-			margin:0 20px 8px 5px;
-			padding-bottom:4px;
-		}
-		blockquote {
-			text-align:left;
-			small {
-				color:lighten(greyscale(@text-color),25%);
-			}
-		}
-		.featured-icon {
-		}
-		.featured-icon-small {
-		}
-	}
 }
 
 /* skills */
