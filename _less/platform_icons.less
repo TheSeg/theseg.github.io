@@ -1,92 +1,59 @@
 // Platform Icons
 
+@platform-x-base: -1px;
+@platform-x-not: -27px;
+@platform-x-unreleased: -53px;
+@platform-sprite: '../img/platform_icons.png';
+
 [class*=" platform-"]:before {
   text-decoration: inherit;
   display: inline-block;
   speak: none;
 }
 
-.platform-not {
-  opacity:1;
-}
-.platform-unreleased {
-  opacity:0.75;
+.platform-icon-function( @icon-y , @icon-width:24px , @icon-height:32px; ) {
+	background: url(@platform-sprite) no-repeat @platform-x-base @icon-y;
+	width:@icon-width;
+	height:@icon-height;
+	&.platform-not {
+		background-position:@platform-x-not @icon-y;
+		opacity:1;
+	}
+	&.platform-unreleased {
+		background-position:@platform-x-unreleased @icon-y;
+		opacity:0.75;
+	}
 }
 
 .platform-win {
-  background: url('../img/platform_icons.png') no-repeat -1px -166px;
-  width: 24px;
-  height: 25px;
-  &.platform-not {
-    background-position:-27px -166px;
-  }
+    .platform-icon-function( -166px );
 }
 .platform-macosx {
-  background: url('../img/platform_icons.png') no-repeat -1px -192px;
-  width: 24px;
-  height: 29px;
-  &.platform-not {
-    background-position:-27px -192px;
-  }
-}
-.platform-mac {
-  // Alias.
-  .platform-macosx;
+    .platform-icon-function( -199px );
 }
 .platform-xbox360 {
-  background: url('../img/platform_icons.png') no-repeat -1px -1px;
-  width: 19px;
-  height: 32px;
-  &.platform-not {
-    background-position:-27px -1px;
-  }
+    .platform-icon-function( -1px , 19px );
 }
 .platform-wii {
-  background: url('../img/platform_icons.png') no-repeat -1px -34px;
-  width: 23px;
-  height: 32px;
-  &.platform-not {
-    background-position:-27px -34px;
-  }
-  &.platform-unreleased {
-    background-position:-53px -34px;
-  }
+    .platform-icon-function( -34px , 23px );
 }
 .platform-ps3 {
-  background: url('../img/platform_icons.png') no-repeat -1px -67px;
-  width: 24px;
-  height: 32px;
-  &.platform-not {
-    background-position:-27px -67px;
-  }
+    .platform-icon-function( -67px );
 }
 .platform-ps3-slim {
-  background: url('../img/platform_icons.png') no-repeat -1px -100px;
-  width: 23px;
-  height: 32px;
-  &.platform-not {
-    background-position:-27px -100px;
-  }
+    .platform-icon-function( -100px , 23px );
 }
 .platform-ios {
-  background: url('../img/platform_icons.png') no-repeat -1px -133px;
-  width: 20px;
-  height: 32px;
-  &.platform-not {
-    background-position:-27px -133px;
-  }
+    .platform-icon-function( -133px , 20px );
 }
 .platform-steam {
-  background: url('../img/platform_icons.png') no-repeat -1px -222px;
-  width: 24px;
-  height: 21px;
-  padding-bottom:3px;
-  &.platform-not {
-    background-position:-27px -222px;
-  }
-  &.platform-unreleased {
-    background-position:-53px -222px;
-  }
+    .platform-icon-function( -232px );
 }
 
-
+// Aliases
+.platform-mac {
+    .platform-macosx;
+}
+.platform-xbox {
+    .platform-xbox360;
+}
