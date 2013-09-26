@@ -121,6 +121,44 @@ table {
   }
 }
 
+/* navigation */
+#navigation {
+  @navigation-radius:10px;
+  padding-top:0;
+  margin-top:0;
+  text-shadow:1pt 1pt 1pt #000;
+  .navbar {
+    .border-top-radius(0);
+    .border-bottom-radius(@navigation-radius);
+    border-width:0;
+  }
+  .navbar-nav {
+    margin-bottom:0;
+  }
+  .navbar-fixed-top {
+    li.pdf {
+      &.btn-warning {
+        background-color:@btn-warning-bg;
+      }
+    }
+  }
+  li.pdf {
+    color:@btn-warning-color;
+    a {
+      color:@btn-warning-color;
+    }
+    @media (min-width: @screen-sm) {
+      &.btn-warning {
+        background-color:transparent;
+        #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      .border-bottom-radius(@navigation-radius);
+    }
+  }
+}
+
 /* introduction */
 #introduction {
 	text-align:center;
@@ -169,44 +207,6 @@ table {
 		font-size:@overview-icon-size;
 		width:@overview-icon-size;
 	}
-}
-
-/* navigation */
-#navigation {
-  @navigation-radius:10px;
-  padding-top:0;
-  margin-top:0;
-  text-shadow:1pt 1pt 1pt #000;
-  .navbar {
-    .border-top-radius(0);
-    .border-bottom-radius(@navigation-radius);
-    border-width:0;
-  }
-  .navbar-nav {
-    margin-bottom:0;
-  }
-  .navbar-fixed-top {
-    li.pdf {
-      &.btn-warning {
-        background-color:@btn-warning-bg;
-      }
-    }
-  }
-  li.pdf {
-    color:@btn-warning-color;
-    a {
-      color:@btn-warning-color;
-    }
-    @media (min-width: @screen-sm) {
-      &.btn-warning {
-        background-color:transparent;
-        #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
-      }
-    }
-    @media (max-width: @screen-xs-max) {
-      .border-bottom-radius(@navigation-radius);
-    }
-  }
 }
 
 /* skills */
