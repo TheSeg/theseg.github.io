@@ -162,25 +162,27 @@ table {
 /* introduction */
 #introduction {
 	text-align:center;
-	margin-top:0px;
+	margin-top:0;
 	&.addPadding {
-		margin-top:120px;
+		margin-top:80px;
 	}
+    .introduction-set {
+        margin-bottom:20px;
+    }
 	.introduction-header-text {
 		font-size:20pt;
-		padding-bottom:40px;
 	}
 	.introduction-block {
 		h2 {
 			font-size:35pt;
 			@media (max-width: @screen-xs-max) {
-				font-size:( 35pt / 1.5 );
+				font-size:( 35pt / 1.25 );
 			}
 		}
 		.icon-stack {
 			font-size:60pt;
 			@media (max-width: @screen-xs-max) {
-				font-size:( 60pt / 1.5 );
+				font-size:( 60pt / 1.25 );
 			}
 		}
 	}
@@ -188,6 +190,7 @@ table {
 
 /* overview */
 #overview {
+    margin-top:20px;
 	.panel-success {
 		color:darken(@brand-success,10%);
 		.seg-icon-item {
