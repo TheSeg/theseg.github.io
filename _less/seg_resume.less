@@ -172,20 +172,16 @@ table {
 	}
 	.introduction-block {
 		h2 {
-			font-size:30pt;
-			text-align:left;
-			margin:0 20px 8px 5px;
-			padding-bottom:4px;
-		}
-		blockquote {
-			text-align:left;
-			small {
-				color:lighten(greyscale(@text-color),25%);
+			font-size:35pt;
+			@media (max-width: @screen-xs-max) {
+				font-size:( 35pt / 1.5 );
 			}
 		}
-		.featured-icon {
-		}
-		.featured-icon-small {
+		.icon-stack {
+			font-size:60pt;
+			@media (max-width: @screen-xs-max) {
+				font-size:( 60pt / 1.5 );
+			}
 		}
 	}
 }
@@ -223,6 +219,16 @@ table {
       }
     }
   }
+}
+
+/* Recommendations */
+#recommendations {
+	blockquote {
+		text-align:left;
+		small {
+			color:lighten(greyscale(@text-color),25%);
+		}
+	}
 }
 
 /* #positions */
