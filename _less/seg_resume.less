@@ -173,16 +173,17 @@ table {
 		font-size:20pt;
 	}
 	.introduction-block {
+        @introduction-icon-size-xs: 1.25;
 		h2 {
 			font-size:35pt;
 			@media (max-width: @screen-xs-max) {
-				font-size:( 35pt / 1.25 );
+				font-size:( 35pt / @introduction-icon-size-xs );
 			}
 		}
 		.icon-stack {
 			font-size:60pt;
 			@media (max-width: @screen-xs-max) {
-				font-size:( 60pt / 1.25 );
+				font-size:( 60pt / @introduction-icon-size-xs );
 			}
 		}
 	}
