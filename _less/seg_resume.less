@@ -177,12 +177,24 @@ table {
 	}
 	.introduction-block {
         @introduction-icon-size-xs: 1.25;
-		h2 {
-			font-size:35pt;
-			@media (max-width: @screen-xs-max) {
-				font-size:( 35pt / @introduction-icon-size-xs );
-			}
+        margin-bottom:20px;
+        .introduction-text {
+            @media (min-width: @screen-sm) {
+                display:table-row;
+                vertical-align:middle;
+                height:100%;
+            }
 		}
+		h2 {
+            @base-font-size:40pt;
+			font-size:@base-font-size;
+			@media (max-width: @screen-xs-max) {
+				font-size:( @base-font-size / @introduction-icon-size-xs );
+			}
+            @media (min-width: @screen-lg ) {
+                padding-top:( @base-font-size / 2 );
+            }
+        }
 		.icon-stack {
 			font-size:60pt;
 			@media (max-width: @screen-xs-max) {
