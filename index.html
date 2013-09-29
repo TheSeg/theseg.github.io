@@ -5,64 +5,11 @@ title: John "Seg" Seggerson
   {% include content/navigation.html %}
   
 <div class="container">
-  
-  <section id="introduction">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <p class="lead">Seg's experience brings you the opportunity to create interactive narratives that engage the audience in rich, meaningful experiences, and expand the potential of your team in a respectful and rewarding environment.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <span class="icon-stack featured-icon">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-puzzle-piece icon-light"></i>
-          </span>
-          <h2>Designer</h2>
-          <blockquote>
-            <p>Seg is a self starter in general, so it was always comforting to know he knew exactly what needed his attention first and how long he should be spending on that task before moving on to the next.</p>
-            <small><strong>Matthew Hansen</strong><br>Senior Producer @ Double Fine Productions</small>
-          </blockquote>
-        </div>
-        <div class="col-md-4">
-          <span class="icon-stack featured-icon">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-code icon-light"></i>
-          </span>
-          <h2>Programmer</h2>
-          <blockquote>
-            <p>He put in so much extra time and effort to ensure that the games we released took advantage of new technology and were smartly produced.</p>
-            <small><strong>John Joy</strong><br>Assistant Producer @ Telltale Games</small>
-          </blockquote>
-        </div>
-        <div class="col-md-4">
-          <span class="icon-stack featured-icon">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-group icon-light"></i>
-          </span>
-          <h2>Producer</h2>
-          <blockquote>
-            <p>John displayed remarkable maturity and organizational skills and made my job much easier. His attention to detail and adherence to best practices made him a star player at Emerson.</p>
-            <small><strong>Eben Goodman</strong><br>Associate Director of Software &amp; Systems Development @ Berkleemusic</small>
-          </blockquote>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 col-md-offset-2">
-          <span class="icon-stack featured-icon-small">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-heart icon-light"></i>
-          </span>
-        </div>
-        <div class="col-md-6">
-          <blockquote>
-            <p>Seg is one of the hardest working, easiest to work with, intelligent and forthright employees I have ever known at any organization.</p>
-            <small><strong>Stefan Antonowicz</strong>, Director of Engineering @ Wired Magazine</small>
-          </blockquote>
-        </div>
-      </div>
-  </section>
-  
+
+<section id="introduction">
+	{% include content/introduction.html %}
+</section>
+
 <section id="overview">
   <div class="page-header">
     <h1>Overview</h1>
@@ -78,6 +25,17 @@ title: John "Seg" Seggerson
   </div>
   
   {% include content/skills.html %}
+</section>
+
+<!-- Recommendations
+================================================== -->
+<section id="recommendations">
+	<div class="page-header">
+		<h1>Recommendations</h1>
+	</div>
+	
+	{% include content/recommendations.html %}
+
 </section>
 
 <!-- Positions
@@ -102,8 +60,10 @@ title: John "Seg" Seggerson
 
 <!-- Share Tools
 ================================================== -->
-<section id="share" class="only-screen">
-  
+<section id="share" class="hidden-print">
+	<div class="page-header">
+		<h1>Share</h1>
+	</div>
   {% include content/share.html %}
   
 </section>
