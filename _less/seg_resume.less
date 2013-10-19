@@ -160,11 +160,31 @@ table {
             }
         }
         .pdf-dropdown {
-            //border-left:1px solid darken( @btn-warning-bg , 5% );
+            &.open .dropdown-toggle {
+                @pdf-dropdown-toggle-open:darken(@btn-warning-bg , 10%);
+                background-color:@pdf-dropdown-toggle-open;
+                @media (min-width: @screen-sm) {
+                    background-color:transparent;
+                    #gradient > .vertical( fade( @pdf-dropdown-toggle-open , 0% ) , @pdf-dropdown-toggle-open , 10% , 20% );
+                }
+            }
             .pdf-dropdown-menu {
-                font-size:12pt;
+                .dropdown-header {
+                    color:black;
+                    text-shadow:none;
+                    font-weight:bold;
+                    padding-left:10px;
+                }
+                background-color:lighten(@btn-warning-bg , 20%);
+                font-size:10pt;
+                a:hover {
+                    background-color:@btn-warning-bg;
+                }
                 .focus {
-                    font-size:14pt;
+                    font-size:13pt;
+                }
+                .divider {
+                    background-color:#333;
                 }
             }
         }
