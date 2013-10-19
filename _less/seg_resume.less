@@ -123,40 +123,72 @@ table {
 
 /* navigation */
 #navigation {
-  @navigation-radius:10px;
-  padding-top:0;
-  margin-top:0;
-  text-shadow:1pt 1pt 1pt #000;
-  .navbar {
-    .border-top-radius(0);
-    .border-bottom-radius(@navigation-radius);
-    border-width:0;
-  }
-  .navbar-nav {
-    margin-bottom:0;
-  }
-  .navbar-fixed-top {
-    li.pdf {
-      &.btn-warning {
+    @navigation-radius:10px;
+    padding-top:0;
+    margin-top:0;
+    text-shadow:1pt 1pt 1pt #000;
+    .navbar {
+        .border-top-radius(0);
+        .border-bottom-radius(@navigation-radius);
+        border-width:0;
+    }
+    .navbar-nav {
+        margin-bottom:0;
+    }
+    .navbar-fixed-top {
+    }
+    .navbar-right {
         background-color:@btn-warning-bg;
-      }
+        @media (min-width: @screen-sm) {
+            background-color:transparent;
+            #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
+        }
+        li {
+            a {
+                @navbar-right-li-a-padding:10px;
+                padding-left:@navbar-right-li-a-padding;
+                padding-right:@navbar-right-li-a-padding;
+            }
+            &.pdf {
+                color:@btn-warning-color;
+                a {
+                    color:@btn-warning-color;
+                }
+                @media (max-width: @screen-xs-max) {
+                    .border-bottom-radius(@navigation-radius);
+                }
+            }
+        }
+        .pdf-dropdown {
+            &.open .dropdown-toggle {
+                @pdf-dropdown-toggle-open:darken(@btn-warning-bg , 10%);
+                background-color:@pdf-dropdown-toggle-open;
+                @media (min-width: @screen-sm) {
+                    background-color:transparent;
+                    #gradient > .vertical( fade( @pdf-dropdown-toggle-open , 0% ) , @pdf-dropdown-toggle-open , 10% , 20% );
+                }
+            }
+            .pdf-dropdown-menu {
+                .dropdown-header {
+                    color:black;
+                    text-shadow:none;
+                    font-weight:bold;
+                    padding-left:10px;
+                }
+                background-color:lighten(@btn-warning-bg , 20%);
+                font-size:10pt;
+                a:hover {
+                    background-color:@btn-warning-bg;
+                }
+                .focus {
+                    font-size:13pt;
+                }
+                .divider {
+                    background-color:#333;
+                }
+            }
+        }
     }
-  }
-  li.pdf {
-    color:@btn-warning-color;
-    a {
-      color:@btn-warning-color;
-    }
-    @media (min-width: @screen-sm) {
-      &.btn-warning {
-        background-color:transparent;
-        #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
-      }
-    }
-    @media (max-width: @screen-xs-max) {
-      .border-bottom-radius(@navigation-radius);
-    }
-  }
 }
 
 /* introduction */

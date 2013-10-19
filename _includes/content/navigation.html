@@ -3,7 +3,8 @@
   <div class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header hidden-xs hidden-sm">
-        <a class="navbar-brand toTop" href="#top">John "Seg" Seggerson</a>
+        <a class="navbar-brand toTop hidden-md" href="#top">John "Seg" Seggerson</a>
+        <a class="navbar-brand toTop visible-md" href="#top">"Seg"</a>
       </div>
       <div id="scrollTarget" class="">
         <ul class="nav navbar-nav">
@@ -11,12 +12,30 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#recommendations">Recommendations</a></li>
           <li><a href="#positions">Project Positions</a></li>
-          <li><a href="#releasedtitles">Projects &amp; Roles</a></li>
+          <li>
+              <a href="#releasedtitles">
+                  <span class="hidden-sm">Projects &amp; Roles</span>
+                  <span class="visible-sm">Projects&hellip;</span>
+              </a>
+          </li>
           <li><a href="#share">Share</a></li>
-          <li class="pdf btn-warning hidden-md hidden-lg"><a href="{{site.baseurl}}pdf/John_Seg_Seggerson.pdf"><i class="icon-file"></i> PDF</a></li>
+          <li class="pdf btn-warning hidden-md hidden-lg">
+              <a href="{{site.baseurl}}pdf/John_Seg_Seggerson.pdf"><i class="icon-file"></i> PDF</a>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
-          <li class="pdf btn-warning"><a href="{{site.baseurl}}pdf/John_Seg_Seggerson.pdf"><i class="icon-file"></i> PDF</a></li>
+            <li class="pdf">
+                <a href="{{site.baseurl}}pdf/John_Seg_Seggerson.pdf"><i class="icon-download"></i> PDF</a>
+            </li>
+            <li class="dropdown pdf pdf-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                <ul class="dropdown-menu pdf pdf-dropdown-menu">
+                    <li role="presentation" class="dropdown-header">Other Formats</li>
+                    <li class="focus"><a href="{{site.baseurl}}pdf/John_Seg_Seggerson.pdf">PDF</a></li>
+                    <li><a href="{{site.baseurl}}pdf/John_Seg_Seggerson.docx">DOCX</a></li>
+                    <li><a href="{{site.baseurl}}pdf/John_Seg_Seggerson.txt">TEXT</a></li>
+                </ul>
+            </li>
         </ul>
       </div>
     </div>
