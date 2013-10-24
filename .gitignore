@@ -6,3 +6,6 @@ Thumbs.db
 _site/
 _bower_components/
 codekit-config.json
+
+# Node.js Ignores
+node_modules/
