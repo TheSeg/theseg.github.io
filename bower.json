@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "jquery": "latest",
-        "font-awesome": "latest",
+        "font-awesome": "3.2.1",
         "holderjs": "latest",
         "html5shiv": "latest",
         "bootstrap": ">= 3.0.0",
