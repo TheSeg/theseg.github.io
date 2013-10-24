@@ -1,4 +1,3 @@
-/*! theseg-github-io - Concat - 2013-10-24 */
 (function ($) {
     
     $(function(){

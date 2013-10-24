@@ -1,4 +1,3 @@
-/*! theseg-github-io - Concat - 2013-10-24 */
 +function ($) { "use strict";
 
   // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)

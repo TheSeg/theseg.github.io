@@ -31,7 +31,6 @@ module.exports = function(grunt) {
     },
     less: {
       options: {
-        banner: '/*! <%= pkg.name %> - LESS - <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         stripBanners: true,
         yuicompress: true,
       },
@@ -42,7 +41,6 @@ module.exports = function(grunt) {
     },
     concat: {
       options: {
-        banner: '/*! <%= pkg.name %> - Concat - <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         stripBanners: true,
       },
       bootstrap: {
@@ -69,14 +67,31 @@ module.exports = function(grunt) {
         //nonull: true,
       },
     },
+    copy: {
+      options: {
+        stripBanners:true,
+      },
+      holderjs: {
+        src: "<%= dirs.holderjs %>/holder.js",
+        dest: "<%= dirs.javascript_dist %>/holder.js",
+      },
+      html5shiv: {
+        src: "<%= dirs.html5shiv %>/src/html5shiv.js",
+        dest: "<%= dirs.javascript_dist %>/html5shiv.js",
+      },
+    },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> - Uglify - <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         stripBanners: true,
       },
       bootstrap: {
         src: '<%= concat.bootstrap.dest %>',
         dest: '<%= dirs.javascript_dist %>/bootstrap.min.js',
+        nonull: true,
+      },
+      holderjs: {
+        src: ['<%= copy.holderjs.dest %>'],
+        dest: '<%= dirs.javascript_dist %>/holder.min.js',
         nonull: true,
       },
       custom: {
@@ -91,12 +106,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   
   // Inital Setup Task
   grunt.registerTask( 'init', [ 'init' , 'build' ] );
   
   // Build Task
-  grunt.registerTask( 'build' , [ 'less' , 'concat' , 'uglify' ] );
+  grunt.registerTask( 'build' , [ 'less' , 'concat' , 'copy' , 'uglify' ] );
 
   // Default task(s).
   grunt.registerTask( 'default' , ['build'] );
