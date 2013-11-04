@@ -79,6 +79,10 @@ module.exports = function(grunt) {
         src: "<%= dirs.html5shiv %>/src/html5shiv.js",
         dest: "<%= dirs.javascript_dist %>/html5shiv.js",
       },
+      respond: {
+        src:"<%= dirs.respond %>/respond.min.js",
+        dest: "<%= dirs.javascript_dist %>/respond.min.js",
+      },
     },
     uglify: {
       options: {
