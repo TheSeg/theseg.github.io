@@ -91,8 +91,20 @@ module.exports = function(grunt) {
       },
       font_awesome: {
         files: [
-          {expand: true, src: ['<%= dirs.fa %>/font/*'], dest: 'font/', filter: 'isFile'},
-          {expand: true, src: ['<%= dirs.fa %>/css/*.min.css'], dest: '<%= dirs.css %>/', filter: 'isFile'},
+          {
+            expand: true, 
+            src: '<%= dirs.fa %>/fonts/*', 
+            dest: 'font/', 
+            flatten: true, 
+            filter: 'isFile',
+          },
+          {
+            expand: true, 
+            src: '<%= dirs.fa %>/css/*.min.css', 
+            flatten: true, 
+            dest: '<%= dirs.css %>', 
+            filter: 'isFile'
+          },
         ],
       },
     },

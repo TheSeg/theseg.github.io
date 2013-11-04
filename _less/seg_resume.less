@@ -193,47 +193,47 @@ table {
 
 /* introduction */
 #introduction {
-	text-align:center;
+  text-align:center;
 	margin-top:0;
 	&.addPadding {
 		margin-top:80px;
 	}
-    .introduction-set {
-        margin-bottom:20px;
-    }
+  .introduction-set {
+    margin-bottom:20px;
+  }
 	.introduction-header-text {
 		font-size:20pt;
-        @media (max-width: @screen-xs-max) {
-            font-size:16pt;
-        }
-	}
-	.introduction-block {
-        @introduction-icon-size-xs: 1.25;
-        margin-bottom:20px;
-        .introduction-text {
-            @media (min-width: @screen-sm-min) {
-                display:table-row;
-                vertical-align:middle;
-                height:100%;
-            }
+    @media (max-width: @screen-xs-max) {
+      font-size:16pt;
+    }
+  }
+  .introduction-block {
+    @introduction-icon-size-xs: 1.25;
+    margin-bottom:20px;
+    .introduction-text {
+      @media (min-width: @screen-sm-min) {
+        display:table-row;
+        vertical-align:middle;
+        height:100%;
+      }
 		}
 		h2 {
-            @base-font-size:40pt;
-			font-size:@base-font-size;
-			@media (max-width: @screen-xs-max) {
-				font-size:( @base-font-size / @introduction-icon-size-xs );
-			}
-            @media (min-width: @screen-lg-min ) {
-                padding-top:( @base-font-size / 2 );
-            }
-        }
-		.icon-stack {
-			font-size:60pt;
-			@media (max-width: @screen-xs-max) {
-				font-size:( 60pt / @introduction-icon-size-xs );
-			}
-		}
-	}
+      @base-font-size:40pt;
+      font-size:@base-font-size;
+      @media (max-width: @screen-xs-max) {
+        font-size:( @base-font-size / @introduction-icon-size-xs );
+      }
+      @media (min-width: @screen-lg-min ) {
+        padding-top:( @base-font-size / 2 );
+      }
+    }
+    .fa-stack {
+      font-size:60pt;
+      @media (max-width: @screen-xs-max) {
+        font-size:( 60pt / @introduction-icon-size-xs );
+      }
+    }
+  }
 }
 
 /* overview */
@@ -300,6 +300,15 @@ table {
     }
     .dates{
       font-size:9pt;
+    }
+  }
+}
+
+/* Titles */
+#releasedTitlesTable {
+  .note-local, .note-local-footer {
+    &:hover {
+      color: darken(@brand-info,10%);
     }
   }
 }
