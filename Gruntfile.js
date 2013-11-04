@@ -71,10 +71,6 @@ module.exports = function(grunt) {
       options: {
         stripBanners:true,
       },
-      holderjs: {
-        src: "<%= dirs.holderjs %>/holder.js",
-        dest: "<%= dirs.javascript_dist %>/holder.js",
-      },
       html5shiv: {
         src: "<%= dirs.html5shiv %>/src/html5shiv.js",
         dest: "<%= dirs.javascript_dist %>/html5shiv.js",
@@ -94,7 +90,7 @@ module.exports = function(grunt) {
         nonull: true,
       },
       holderjs: {
-        src: ['<%= copy.holderjs.dest %>'],
+        src: ['<%= dirs.holderjs %>/holder.js'],
         dest: '<%= dirs.javascript_dist %>/holder.min.js',
         nonull: true,
       },
