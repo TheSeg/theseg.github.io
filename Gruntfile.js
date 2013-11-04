@@ -103,10 +103,7 @@ module.exports = function(grunt) {
   });
   
   // Load the plugins for tasks.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib');
   
   // Inital Setup Task
   grunt.registerTask( 'init', [ 'init' , 'build' ] );
