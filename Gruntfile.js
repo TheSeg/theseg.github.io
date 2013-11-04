@@ -33,6 +33,9 @@ module.exports = function(grunt) {
       production: {
         options: {
           stripBanners: true,
+          compress: true,
+          cleancss: true,
+          sourceMap: true,
           yuicompress: true,
           paths: [
             "<%= dirs.bs.less %>",
