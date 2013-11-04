@@ -1,0 +1,133 @@
+module.exports = function(grunt) {
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
+          '<%= grunt.template.today("yyyy-mm-dd") %>\n',
+    meta: {
+      version: '0.1.0'
+    },
+    dirs: {
+      javascript_dist: "js",
+      javascript_src: "js/_src",
+      less: "_less",
+      css: "css",
+      bower_components: "_bower_components",
+      bs: {
+        root: "<%= dirs.bower_components %>/bootstrap",
+        js: "<%= dirs.bower_components %>/bootstrap/js",
+        less: "<%= dirs.bower_components %>/bootstrap/less",
+      },
+      fa: "<%= dirs.bower_components %>/font-awesome",
+      holderjs: "<%= dirs.bower_components %>/holderjs",
+      html5shiv: "<%= dirs.bower_components %>/html5shiv/dist",
+      jquery: "<%= dirs.bower_components %>/jquery",
+      respond: "<%= dirs.brower_components %>/respond",
+    },
+    // Config Tasks
+    init: {
+      options: {
+        stripBanners: true,
+      },
+    },
+    less: {
+      production: {
+        options: {
+          stripBanners: true,
+          compress: true,
+          cleancss: true,
+          sourceMap: true,
+          yuicompress: true,
+          paths: [
+            "<%= dirs.bs.less %>",
+            "<%= dirs.less %>",
+            "<%= dirs.less %>/bootswatch",
+          ],
+        },
+        files: {
+          "<%= dirs.css %>/theme-default.css": "<%= dirs.less %>/theme-default.less",
+          "<%= dirs.css %>/theme-valve.css": "<%= dirs.less %>/theme-valve.less",
+        },
+      },
+    },
+    concat: {
+      options: {
+        stripBanners: true,
+      },
+      bootstrap: {
+        src: [
+          '<%= dirs.bs.root %>/js/transition.js',
+          '<%= dirs.bs.root %>/js/alert.js',
+          '<%= dirs.bs.root %>/js/button.js',
+          '<%= dirs.bs.root %>/js/carousel.js',
+          '<%= dirs.bs.root %>/js/collapse.js',
+          '<%= dirs.bs.root %>/js/dropdown.js',
+          '<%= dirs.bs.root %>/js/modal.js',
+          '<%= dirs.bs.root %>/js/tooltip.js',
+          '<%= dirs.bs.root %>/js/popover.js',
+          '<%= dirs.bs.root %>/js/scrollspy.js',
+          '<%= dirs.bs.root %>/js/tab.js',
+          '<%= dirs.bs.root %>/js/affix.js'
+        ],
+        dest:"<%= dirs.javascript_dist %>/bootstrap.js",
+        nonull: true,
+      },
+      custom: {
+        src: [ '<%= dirs.javascript_src %>/bootswatch.js' , '<%= dirs.javascript_src %>/seg_resume.js' ],
+        dest: '<%= dirs.javascript_dist %>/seg_resume.js',
+        //nonull: true,
+      },
+    },
+    copy: {
+      options: {
+        stripBanners:true,
+      },
+      html5shiv: {
+        src: "<%= dirs.html5shiv %>/src/html5shiv.js",
+        dest: "<%= dirs.javascript_dist %>/html5shiv.js",
+      },
+      respond: {
+        src:"<%= dirs.respond %>/respond.min.js",
+        dest: "<%= dirs.javascript_dist %>/respond.min.js",
+      },
+      font_awesome: {
+        files: [
+          {expand: true, src: ['<%= dirs.fa %>/font/*'], dest: 'font/', filter: 'isFile'},
+          {expand: true, src: ['<%= dirs.fa %>/css/*.min.css'], dest: '<%= dirs.css %>/', filter: 'isFile'},
+        ],
+      },
+    },
+    uglify: {
+      options: {
+        stripBanners: true,
+      },
+      bootstrap: {
+        src: '<%= concat.bootstrap.dest %>',
+        dest: '<%= dirs.javascript_dist %>/bootstrap.min.js',
+        nonull: true,
+      },
+      holderjs: {
+        src: ['<%= dirs.holderjs %>/holder.js'],
+        dest: '<%= dirs.javascript_dist %>/holder.min.js',
+        nonull: true,
+      },
+      custom: {
+        src: ['<%= concat.custom.dest %>'],
+        dest: '<%= dirs.javascript_dist %>/seg_resume.min.js',
+        nonull: true,
+      },
+    },
+  });
+  
+  // Load the plugins for tasks.
+  grunt.loadNpmTasks('grunt-contrib');
+  
+  // Inital Setup Task
+  grunt.registerTask( 'init', [ 'init' , 'build' ] );
+  
+  // Build Task
+  grunt.registerTask( 'build' , [ 'concat' , 'copy' , 'less' , 'uglify' ] );
+
+  // Default task(s).
+  grunt.registerTask( 'default' , ['build'] );
+  
+};

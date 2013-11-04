@@ -1,0 +1,14 @@
+{
+  "name": "theseg-github-io",
+  "version": "2.2.0",
+  "author": "John 'Seg' Seggerson <seg@segonmedia.com>",
+  "homepage": "http://theseg.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSeg/theseg.github.io.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.4.0"
+  }
+}
