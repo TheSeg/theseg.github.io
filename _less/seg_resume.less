@@ -139,7 +139,7 @@ table {
     }
     .navbar-right {
         background-color:@btn-warning-bg;
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             background-color:transparent;
             #gradient > .vertical( fade( @btn-warning-bg , 0% ) , @btn-warning-bg , 0% , 20% );
         }
@@ -163,7 +163,7 @@ table {
             &.open .dropdown-toggle {
                 @pdf-dropdown-toggle-open:darken(@btn-warning-bg , 10%);
                 background-color:@pdf-dropdown-toggle-open;
-                @media (min-width: @screen-sm) {
+                @media (min-width: @screen-sm-min) {
                     background-color:transparent;
                     #gradient > .vertical( fade( @pdf-dropdown-toggle-open , 0% ) , @pdf-dropdown-toggle-open , 10% , 20% );
                 }
@@ -211,7 +211,7 @@ table {
         @introduction-icon-size-xs: 1.25;
         margin-bottom:20px;
         .introduction-text {
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 display:table-row;
                 vertical-align:middle;
                 height:100%;
@@ -223,7 +223,7 @@ table {
 			@media (max-width: @screen-xs-max) {
 				font-size:( @base-font-size / @introduction-icon-size-xs );
 			}
-            @media (min-width: @screen-lg ) {
+            @media (min-width: @screen-lg-min ) {
                 padding-top:( @base-font-size / 2 );
             }
         }
