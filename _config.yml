@@ -4,4 +4,4 @@ markdown:  redcarpet
 permalink: pretty
 pygments:  true
 timezone: America/Los_Angeles
-exclude: [README.md,bower.json,bower_components,node_modules]
+exclude: [README.md,bower.json,bower_components,node_modules,"vendor"]
