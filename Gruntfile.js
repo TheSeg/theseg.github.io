@@ -9,13 +9,13 @@ module.exports = function(grunt) {
     dirs: {
       javascript_dist: "js",
       javascript_src: "js/_src",
-      less_src: "_less",
-      css_dist: "css",
+      less: "_less",
+      css: "css",
       bower_components: "_bower_components",
       bs: {
         root: "<%= dirs.bower_components %>/bootstrap",
-        js: "<%= dirs.bs.root %>/js",
-        less: "<%= dirs.bs.root %>/less",
+        js: "<%= dirs.bower_components %>/bootstrap/js",
+        less: "<%= dirs.bower_components %>/bootstrap/less",
       },
       fa: "<%= dirs.bower_components %>/font-awesome",
       holderjs: "<%= dirs.bower_components %>/holderjs",
@@ -30,14 +30,21 @@ module.exports = function(grunt) {
       },
     },
     less: {
-      options: {
-        stripBanners: true,
-        yuicompress: true,
+      production: {
+        options: {
+          stripBanners: true,
+          yuicompress: true,
+          paths: [
+            "<%= dirs.bs.less %>",
+            "<%= dirs.less %>",
+            "<%= dirs.less %>/bootswatch",
+          ],
+        },
+        files: {
+          "<%= dirs.css %>/theme-default.css": "<%= dirs.less %>/theme-default.less",
+          "<%= dirs.css %>/theme-valve.css": "<%= dirs.less %>/theme-valve.less",
+        },
       },
-      files: {
-        "<%= dirs.css_dist %>/bootstrap.css": "<%= dirs.bs.root %>/less/bootstrap.less",
-        "<%= dirs.css_dist %>/theme.css": "<%= dirs.bs.root %>/less/theme.less",
-      }
     },
     concat: {
       options: {
@@ -79,6 +86,11 @@ module.exports = function(grunt) {
         src:"<%= dirs.respond %>/respond.min.js",
         dest: "<%= dirs.javascript_dist %>/respond.min.js",
       },
+      font_awesome: {
+        files: [
+          {expand: true, src: ['<%= dirs.fa %>/font/*'], dest: 'font/', filter: 'isFile'},
+        ],
+      },
     },
     uglify: {
       options: {
@@ -109,7 +121,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'init', [ 'init' , 'build' ] );
   
   // Build Task
-  grunt.registerTask( 'build' , [ 'less' , 'concat' , 'copy' , 'uglify' ] );
+  grunt.registerTask( 'build' , [ 'concat' , 'copy' , 'less' , 'uglify' ] );
 
   // Default task(s).
   grunt.registerTask( 'default' , ['build'] );
