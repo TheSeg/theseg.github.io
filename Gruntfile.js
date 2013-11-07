@@ -128,6 +128,21 @@ module.exports = function(grunt) {
         nonull: true,
       },
     },
+    watch: {
+      js: {
+        files: [
+          "<%= dirs.js_src %>/*.js"
+        ],
+        tasks: [ "concat:custom", "uglify:custom" ],
+      },
+      less: {
+        files: [
+          "<%= dirs.less %>/*.less",
+          "<%= dirs.less %>/bootswatch/*.less",
+        ],
+        tasks: [ "less:production" ],
+      },
+    },
   });
   
   // Load the plugins for tasks.
