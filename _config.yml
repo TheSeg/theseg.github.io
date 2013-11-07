@@ -4,4 +4,13 @@ markdown:  redcarpet
 permalink: pretty
 pygments:  true
 timezone: America/Los_Angeles
-exclude: [README.md,bower.json,bower_components,node_modules,"vendor"]
+exclude: [
+  "README.md",
+  "bower.json",
+  "bower_components",
+  "node_modules",
+  "Gemfile*",
+  "Gruntfile.js",
+  "package.json",
+  "vendor",
+]
