@@ -33,7 +33,7 @@
     $.support.transition = transitionEnd()
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -112,7 +112,7 @@
 
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -202,7 +202,7 @@
     e.preventDefault()
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -400,7 +400,7 @@
     })
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -560,7 +560,7 @@
     $target.collapse(option)
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -695,7 +695,7 @@
     .on('click.bs.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -922,7 +922,7 @@
     .on('show.bs.modal',  '.modal', function () { $(document.body).addClass('modal-open') })
     .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -1288,7 +1288,7 @@
     return this
   }
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -1386,7 +1386,7 @@
     return this
   }
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -1525,7 +1525,7 @@
     })
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -1641,7 +1641,7 @@
     $(this).tab('show')
   })
 
-}(window.jQuery);
+}(jQuery);
 
 +function ($) { "use strict";
 
@@ -1748,4 +1748,4 @@
     })
   })
 
-}(window.jQuery);
+}(jQuery);

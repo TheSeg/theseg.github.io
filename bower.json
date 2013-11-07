@@ -9,11 +9,11 @@
         "url": "http://theseg.github.io"
     },
     "dependencies": {
-        "jquery": "latest",
-        "font-awesome": "~= 4.0.1",
-        "holderjs": "latest",
-        "html5shiv": "latest",
-        "bootstrap": ">= 3.0.1",
-        "respond": "latest"
+        "jquery": "^2.0.3",
+        "font-awesome": "~= 4.0.3",
+        "holderjs": "^2.2.0",
+        "html5shiv": "^3.7.0",
+        "bootstrap": ">= 3.0.2",
+        "respond": "^1.3.0"
     }
 }
