@@ -9,3 +9,4 @@ codekit-config.json
 
 # Node.js Ignores
 node_modules/
+Gemfile.lock
