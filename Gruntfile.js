@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       },
     },
     less: {
-      production: {
+      bootstrap: {
         options: {
           stripBanners: true,
           compress: true,
@@ -46,6 +46,21 @@ module.exports = function(grunt) {
         files: {
           "<%= dirs.css %>/theme-default.css": "<%= dirs.less %>/theme-default.less",
           "<%= dirs.css %>/theme-valve.css": "<%= dirs.less %>/theme-valve.less",
+        },
+      },
+      font_awesome: {
+        options: {
+          stripBanners: true,
+          compress: true,
+          cleancss: true,
+          sourceMap: true,
+          yuicompress: true,
+          paths: [
+            "<%= dirs.fa %>/less",
+          ],
+        },
+        files: {
+          "<%= dirs.css %>/font-awesome.min.css": "<%= dirs.less %>/font-awesome.less",
         },
       },
     },
@@ -98,13 +113,6 @@ module.exports = function(grunt) {
             flatten: true, 
             filter: 'isFile',
           },
-          {
-            expand: true, 
-            src: '<%= dirs.fa %>/css/*.min.css', 
-            flatten: true, 
-            dest: '<%= dirs.css %>', 
-            filter: 'isFile'
-          },
         ],
       },
     },
@@ -140,7 +148,7 @@ module.exports = function(grunt) {
           "<%= dirs.less %>/*.less",
           "<%= dirs.less %>/bootswatch/*.less",
         ],
-        tasks: [ "less:production" ],
+        tasks: [ "less" ],
       },
     },
   });
