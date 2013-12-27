@@ -10,7 +10,7 @@
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-contrib-concat": "~0.3",
-    "grunt-contrib-copy": "~0.4",
+    "grunt-contrib-copy": "~0.5",
     "grunt-contrib-imagemin": "~0.4",
     "grunt-contrib-jshint": "~0.7",
     "grunt-contrib-less": "~0.8",
