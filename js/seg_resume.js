@@ -129,6 +129,11 @@ $(document).ready(function() {
         'html':true,
         'title':"Steam &amp; Steamworks<br>for Windows &amp; Mac OS X",
     });
+    $(".platform-android:not(.platform-not)").tooltip({
+        'placement':'bottom',
+        'html':true,
+        'title':"Android &amp; Google Play",
+    });
     $(".note-local").tooltip({
         'placement':'bottom',
         'html':true,
