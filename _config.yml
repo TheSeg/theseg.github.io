@@ -1,9 +1,11 @@
-safe: true
 lsi: false
 markdown:  redcarpet
 permalink: pretty
 pygments:  true
 timezone: America/Los_Angeles
+gems:
+  - jekyll-redirect-from
+  - jemoji
 exclude: [
   "README.md",
   "bower.json",
