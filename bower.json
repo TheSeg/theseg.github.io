@@ -9,7 +9,7 @@
         "url": "http://theseg.github.io"
     },
     "dependencies": {
-        "jquery": "^2.0.3",
+        "jquery": "~2.1.0",
         "font-awesome": "~= 4.0.3",
         "holderjs": "^2.3.2",
         "html5shiv": "^3.7.0",
