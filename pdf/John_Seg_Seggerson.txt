@@ -4,11 +4,11 @@ It's dangerous to develop alone. Take Seg!
 Seg's experience brings you the opportunity to create interactive narratives that engage the audience in rich, meaningful experiences, and expand the potential of your team in a respectful and rewarding environment.
 
 Statistics
-* 6+ Years in Game Development
-* 64 Individual Releases
+* 8+ Years in Game Development
+* 66 Individual Releases
 * 11 Platforms
-* 11 Franchises
-* 16 Seasons
+* 13 Franchises
+* 18 Seasons
 * Emerson College, New Media, Bachelor of Fine Arts
 
 
@@ -36,7 +36,7 @@ Lua, JavaScript, Dialog Systems, PHP, Python, Ruby (Ruby on Rails), Unity, ColdF
 * Event planning and management.
 
 * Development and Submissions:
-Windows, Mac OS X, Steam (with Steamworks), Xbox 360 & XBLA, PlayStation 3 & PSN, iOS
+Windows, Mac OS X, Steam (with Steamworks), Xbox 360 & XBLA, PlayStation 3 & PSN, Android, & iOS
 
 
 Project Positions
@@ -45,8 +45,16 @@ Creative Director
 Space Between Studios Oct 2012 - Current
 Pre-production for non-fiction title "Understanding Video Games," a video game narrative illustrating how video games communicate to a player, using a video game. Seg is developing the project with editorial contributions from the gaming community.
 
+Front-End Engineer
+John McNeil Studio Nov 2014 - Present
+John McNeil Studio is a creative studio dedicated to making beautiful design, films, photos and interactive. The role involves a variety of projects for clients including Juniper Networks and CA Inc. Roles include implementing interactive front-ends for web and applications plus designing and building back-end solutions.
+
+Executive Producer
+Jan 2014 - Present
+In the advent of four Independent Game Festival nominations for "Dominique Pamplemousse", Deirdra "Squinky" Kiai required production assistance. Duties include release management for Steam and Humble Bundle, including art production, game engineering, and marketing assets. In addition, developing a public relations plan for GDC and general release of the title.
+
 Web Design & Programming
-Contract ￼ Feb 2013 - Current
+Contract Feb 2013 - Current
 Front-end web development using PHP, CSS, LESS, JavaScript, and related technology for Internet comic strip. Seg designs the layout in consultation with IP owners and develops social media tools for promotional purposes.
 
 Special Projects Producer
