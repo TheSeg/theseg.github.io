@@ -1,4 +1,4 @@
-// Cyborg 3.1.1
+// Cyborg 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -50,6 +50,10 @@ table,
     color: #fff;
     text-decoration: underline;
   }
+
+  .text-muted {
+    color: @text-muted;
+  }
 }
 
 .table-responsive > .table {
@@ -60,36 +64,42 @@ table,
 
 .has-warning {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: @brand-warning;
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: @brand-warning;
   }
 }
 
 .has-error {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: @brand-danger;
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: @brand-danger;
   }
 }
 
 .has-success {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: @brand-success;
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: @brand-success;
   }
 }
@@ -103,15 +113,6 @@ legend {
 }
 
 // Navs =======================================================================
-
-.nav {
-
-  .caret,
-  a:hover .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
-  }
-}
 
 .nav-tabs,
 .nav-pills,
@@ -134,21 +135,31 @@ legend {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 
 // Progress bars ==============================================================
 
 // Containers =================================================================
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: @thumbnail-border;
+}
 
 .jumbotron {
 
