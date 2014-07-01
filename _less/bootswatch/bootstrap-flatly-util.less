@@ -1,4 +1,4 @@
-// Flatly 3.1.1
+// Flatly 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -7,6 +7,23 @@
 // Navbar =====================================================================
 
 .navbar {
+  border-width: 0;
+
+  &-default {
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-inverse-bg;
+    }
+  }
 
   &-brand {
     padding: 18.5px 15px 20.5px;
@@ -91,22 +108,8 @@ table,
 
 // Forms ======================================================================
 
-.form-control,textarea.form-control,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
+.form-control,
+input, {
   border-width: 2px;
   .box-shadow(none);
 
@@ -117,7 +120,12 @@ input[type="color"],
 
 .has-warning {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: @brand-warning;
   }
 
@@ -125,11 +133,20 @@ input[type="color"],
   .form-control:focus {
     border: 2px solid @brand-warning;
   }
+
+  .input-group-addon {
+    border-color: @brand-warning;
+  }
 }
 
 .has-error {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: @brand-danger;
   }
 
@@ -137,17 +154,30 @@ input[type="color"],
   .form-control:focus {
     border: 2px solid @brand-danger;
   }
+
+  .input-group-addon {
+    border-color: @brand-danger;
+  }
 }
 
 .has-success {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: @brand-success;
   }
 
   .form-control,
   .form-control:focus {
     border: 2px solid @brand-success;
+  }
+
+  .input-group-addon {
+    border-color: @brand-success;
   }
 }
 
@@ -188,15 +218,19 @@ input[type="color"],
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 
@@ -205,6 +239,10 @@ input[type="color"],
 .progress {
   height: 10px;
   .box-shadow(none);
+  .progress-bar {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 // Containers =================================================================
