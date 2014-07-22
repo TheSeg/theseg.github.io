@@ -136,7 +136,18 @@ module.exports = function(grunt) {
         nonull: true,
       },
     },
+    jshint: {
+      gruntfile: {
+        files: {
+          src: ['gruntfile.js']
+        }
+      }
+    },
     watch: {
+      gruntfile: {
+        files: [ 'gruntfile.js' ],
+        tasks: [ 'jshint:gruntfile' ]
+      },
       js: {
         files: [
           "<%= dirs.js_src %>/*.js"
