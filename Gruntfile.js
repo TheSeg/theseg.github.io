@@ -141,6 +141,16 @@ module.exports = function(grunt) {
         files: {
           src: ['gruntfile.js']
         }
+      },
+      concat_before: {
+        files: {
+          src: ['<%= dirs.js_src %>/**/*.js']
+        }
+      },
+      concat_after: {
+        files: {
+          src: ['<%= dirs.js_dist %>/seg_resume.js']
+        }
       }
     },
     watch: {
@@ -152,7 +162,7 @@ module.exports = function(grunt) {
         files: [
           "<%= dirs.js_src %>/*.js"
         ],
-        tasks: [ "concat:custom", "uglify:custom" ],
+        tasks: [ "jshint:concat_before", "concat:custom", "jshint:concat_after", "uglify:custom" ],
       },
       less: {
         files: [
