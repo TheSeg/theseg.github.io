@@ -1,4 +1,4 @@
-// Flatly 3.2.0
+// Flatly 3.3.1
 // Bootswatch
 // -----------------------------------------------------
 
@@ -72,8 +72,12 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
   }
 
   .success,
@@ -209,19 +213,6 @@ input, {
 
 // Indicators =================================================================
 
-.alert {
-
-  a,
-  .alert-link {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
 .close {
   color: #fff;
   text-decoration: none;
@@ -231,6 +222,14 @@ input, {
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -249,4 +248,64 @@ input, {
 
 .well {
   .box-shadow(none);
+}
+
+a.list-group-item {
+
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    border-color: @list-group-border;
+  }
+
+  &-success {
+    &.active {
+      background-color: @state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-success-bg, 5%);
+    }
+  }
+
+  &-warning {
+    &.active {
+      background-color: @state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-warning-bg, 5%);
+    }
+  }
+
+  &-danger {
+    &.active {
+      background-color: @state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-danger-bg, 5%);
+    }
+  }
+}
+
+.panel {
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
+  }
+}
+
+.popover {
+  color: @text-color;
 }
