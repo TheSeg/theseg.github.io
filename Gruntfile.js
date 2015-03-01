@@ -154,6 +154,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload:true,
+      },
       gruntfile: {
         files: [ 'gruntfile.js' ],
         tasks: [ 'jshint:gruntfile' ]
@@ -170,6 +173,12 @@ module.exports = function(grunt) {
           "<%= dirs.less %>/bootswatch/*.less",
         ],
         tasks: [ "less" ],
+      },
+      html: {
+        files: [
+          "site/**/*.html",
+        ],
+        tasks: [],
       },
     },
   });
