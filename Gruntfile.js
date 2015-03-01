@@ -154,6 +154,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload:true,
+      },
       gruntfile: {
         files: [ 'gruntfile.js' ],
         tasks: [ 'jshint:gruntfile' ]
