@@ -174,6 +174,12 @@ module.exports = function(grunt) {
         ],
         tasks: [ "less" ],
       },
+      html: {
+        files: [
+          "site/**/*.html",
+        ],
+        tasks: [],
+      },
     },
   });
   
