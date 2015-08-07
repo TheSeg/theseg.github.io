@@ -223,9 +223,6 @@ table {
       @media (max-width: @screen-xs-max) {
         font-size:( @base-font-size / @introduction-icon-size-xs );
       }
-      @media (min-width: @screen-lg-min ) {
-        padding-top:( @base-font-size / 2 );
-      }
     }
     .fa-stack {
       font-size:60pt;
@@ -283,6 +280,13 @@ table {
     blockquote {
       font-size:150%;
       text-align:center;
+    }
+  }
+  .page-header {
+    h1 {
+      @media (max-width: @screen-xs-max) {
+        font-size:36px;
+      }
     }
   }
 }
