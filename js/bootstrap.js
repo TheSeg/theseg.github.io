@@ -60,7 +60,7 @@
     $(el).on('click', dismiss, this.close)
   }
 
-  Alert.VERSION = '3.3.5'
+  Alert.VERSION = '3.3.6'
 
   Alert.TRANSITION_DURATION = 150
 
@@ -147,7 +147,7 @@
     this.isLoading = false
   }
 
-  Button.VERSION  = '3.3.5'
+  Button.VERSION  = '3.3.6'
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
@@ -270,7 +270,7 @@
       .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
   }
 
-  Carousel.VERSION  = '3.3.5'
+  Carousel.VERSION  = '3.3.6'
 
   Carousel.TRANSITION_DURATION = 600
 
@@ -498,7 +498,7 @@
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.3.5'
+  Collapse.VERSION  = '3.3.6'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -691,7 +691,7 @@
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
-  Dropdown.VERSION = '3.3.5'
+  Dropdown.VERSION = '3.3.6'
 
   function getParent($this) {
     var selector = $this.attr('data-target')
@@ -723,7 +723,7 @@
       if (e.isDefaultPrevented()) return
 
       $this.attr('aria-expanded', 'false')
-      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
+      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
     })
   }
 
@@ -757,7 +757,7 @@
 
       $parent
         .toggleClass('open')
-        .trigger('shown.bs.dropdown', relatedTarget)
+        .trigger($.Event('shown.bs.dropdown', relatedTarget))
     }
 
     return false
@@ -862,7 +862,7 @@
     }
   }
 
-  Modal.VERSION  = '3.3.5'
+  Modal.VERSION  = '3.3.6'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -1183,7 +1183,7 @@
     this.init('tooltip', element, options)
   }
 
-  Tooltip.VERSION  = '3.3.5'
+  Tooltip.VERSION  = '3.3.6'
 
   Tooltip.TRANSITION_DURATION = 150
 
@@ -1682,7 +1682,7 @@
 
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
-  Popover.VERSION  = '3.3.5'
+  Popover.VERSION  = '3.3.6'
 
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',
@@ -1791,7 +1791,7 @@
     this.process()
   }
 
-  ScrollSpy.VERSION  = '3.3.5'
+  ScrollSpy.VERSION  = '3.3.6'
 
   ScrollSpy.DEFAULTS = {
     offset: 10
@@ -1946,7 +1946,7 @@
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
-  Tab.VERSION = '3.3.5'
+  Tab.VERSION = '3.3.6'
 
   Tab.TRANSITION_DURATION = 150
 
@@ -2102,7 +2102,7 @@
     this.checkPosition()
   }
 
-  Affix.VERSION  = '3.3.5'
+  Affix.VERSION  = '3.3.6'
 
   Affix.RESET    = 'affix affix-top affix-bottom'
 
