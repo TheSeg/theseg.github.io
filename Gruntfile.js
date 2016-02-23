@@ -45,7 +45,6 @@ module.exports = function(grunt) {
         },
         files: {
           "<%= dirs.css %>/theme-default.css": "<%= dirs.less %>/theme-default.less",
-          "<%= dirs.css %>/theme-valve.css": "<%= dirs.less %>/theme-valve.less",
         },
       },
       font_awesome: {
@@ -107,10 +106,10 @@ module.exports = function(grunt) {
       font_awesome: {
         files: [
           {
-            expand: true, 
-            src: '<%= dirs.fa %>/fonts/*', 
-            dest: 'font/', 
-            flatten: true, 
+            expand: true,
+            src: '<%= dirs.fa %>/fonts/*',
+            dest: 'font/',
+            flatten: true,
             filter: 'isFile',
           },
         ],
@@ -182,7 +181,7 @@ module.exports = function(grunt) {
       },
     },
   });
-  
+
   // Load the plugins for tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -191,14 +190,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  
+
   // Inital Setup Task
   grunt.registerTask( 'init', [ 'init' , 'build' ] );
-  
+
   // Build Task
   grunt.registerTask( 'build' , [ 'concat' , 'copy' , 'less' , 'uglify' ] );
 
   // Default task(s).
   grunt.registerTask( 'default' , ['build'] );
-  
+
 };
