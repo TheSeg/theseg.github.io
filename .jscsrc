@@ -1,0 +1,84 @@
+{
+  "disallowKeywordsOnNewLine": [
+    "else"
+  ],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultiLineTernary": true,
+  "disallowMultipleSpaces": false,
+  "disallowMultipleVarDecl": true, // can be strict to stop decl inside for loops etc
+  "disallowNestedTernaries": true,
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterPrefixUnaryOperators": [
+    "++",
+    "--"
+  ],
+  "disallowSpaceBeforeComma": true,
+  "disallowSpaceBeforePostfixUnaryOperators": [
+    "++",
+    "--"
+  ],
+  "disallowSpaceBeforeSemicolon": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInFunctionDeclaration": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInNamedFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideParentheses": true,
+  "disallowTrailingWhitespace": true,
+  "excludeFiles": ["traction/assets/js/lib/**"],
+  "requireCapitalizedConstructors": {
+    "allExcept": ["somethingNative"]
+  },
+  "requireCommaBeforeLineBreak": true,
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch"
+  ],
+  "requireLineBreakAfterVariableAssignment": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireObjectKeysOnNewLine": true,
+  "requirePaddingNewLinesAfterUseStrict": true,
+  "requirePaddingNewLinesBeforeExport": true,
+  "requirePaddingNewLinesInObjects": true,
+  "requireSpaceAfterBinaryOperators": true,
+  "requireSpaceAfterComma": true,
+  "requireSpaceAfterKeywords": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "try",
+    "catch"
+  ],
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "catch"
+  ],
+  "requireSpaceBeforeObjectValues": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  },
+  "requireSpacesInForStatement": true,
+  "validateIndentation": 2,
+  "validateParameterSeparator": ", ",
+  "validateQuoteMarks": "'"
+}
