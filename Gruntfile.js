@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
@@ -7,21 +7,21 @@ module.exports = function(grunt) {
       version: '0.1.0'
     },
     dirs: {
-      js_dist: "js",
-      js_src: "js/_src",
-      less: "_less",
-      css: "css",
-      bower_components: "_bower_components",
+      js_dist: 'js',
+      js_src: 'js/_src',
+      less: '_less',
+      css: 'css',
+      bower_components: '_bower_components',
       bs: {
-        root: "<%= dirs.bower_components %>/bootstrap",
-        js: "<%= dirs.bower_components %>/bootstrap/js",
-        less: "<%= dirs.bower_components %>/bootstrap/less",
+        root: '<%= dirs.bower_components %>/bootstrap',
+        js: '<%= dirs.bower_components %>/bootstrap/js',
+        less: '<%= dirs.bower_components %>/bootstrap/less',
       },
-      fa: "<%= dirs.bower_components %>/font-awesome",
-      holderjs: "<%= dirs.bower_components %>/holderjs",
-      html5shiv: "<%= dirs.bower_components %>/html5shiv/dist",
-      jquery: "<%= dirs.bower_components %>/jquery",
-      respond: "<%= dirs.brower_components %>/respond",
+      fa: '<%= dirs.bower_components %>/font-awesome',
+      holderjs: '<%= dirs.bower_components %>/holderjs',
+      html5shiv: '<%= dirs.bower_components %>/html5shiv/dist',
+      jquery: '<%= dirs.bower_components %>/jquery',
+      respond: '<%= dirs.brower_components %>/respond',
     },
     // Config Tasks
     init: {
@@ -38,13 +38,13 @@ module.exports = function(grunt) {
           sourceMap: true,
           yuicompress: true,
           paths: [
-            "<%= dirs.bs.less %>",
-            "<%= dirs.less %>",
-            "<%= dirs.less %>/bootswatch",
+            '<%= dirs.bs.less %>',
+            '<%= dirs.less %>',
+            '<%= dirs.less %>/bootswatch',
           ],
         },
         files: {
-          "<%= dirs.css %>/theme-default.css": "<%= dirs.less %>/theme-default.less",
+          '<%= dirs.css %>/theme-default.css': '<%= dirs.less %>/theme-default.less',
         },
       },
       font_awesome: {
@@ -55,11 +55,11 @@ module.exports = function(grunt) {
           sourceMap: true,
           yuicompress: true,
           paths: [
-            "<%= dirs.fa %>/less",
+            '<%= dirs.fa %>/less',
           ],
         },
         files: {
-          "<%= dirs.css %>/font-awesome.min.css": "<%= dirs.less %>/font-awesome.less",
+          '<%= dirs.css %>/font-awesome.min.css': '<%= dirs.less %>/font-awesome.less',
         },
       },
     },
@@ -82,26 +82,26 @@ module.exports = function(grunt) {
           '<%= dirs.bs.root %>/js/tab.js',
           '<%= dirs.bs.root %>/js/affix.js'
         ],
-        dest:"<%= dirs.js_dist %>/bootstrap.js",
+        dest: '<%= dirs.js_dist %>/bootstrap.js',
         nonull: true,
       },
       custom: {
-        src: [ '<%= dirs.js_src %>/bootswatch.js' , '<%= dirs.js_src %>/seg_resume.js' ],
+        src: [ '<%= dirs.js_src %>/bootswatch.js', '<%= dirs.js_src %>/seg_resume.js' ],
         dest: '<%= dirs.js_dist %>/seg_resume.js',
         //nonull: true,
       },
     },
     copy: {
       options: {
-        stripBanners:true,
+        stripBanners: true,
       },
       html5shiv: {
-        src: "<%= dirs.html5shiv %>/src/html5shiv.js",
-        dest: "<%= dirs.js_dist %>/html5shiv.js",
+        src: '<%= dirs.html5shiv %>/src/html5shiv.js',
+        dest: '<%= dirs.js_dist %>/html5shiv.js',
       },
       respond: {
-        src:"<%= dirs.respond %>/respond.min.js",
-        dest: "<%= dirs.js_dist %>/respond.min.js",
+        src: '<%= dirs.respond %>/respond.min.js',
+        dest: '<%= dirs.js_dist %>/respond.min.js',
       },
       font_awesome: {
         files: [
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
     },
     watch: {
       options: {
-        livereload:true,
+        livereload: true,
       },
       gruntfile: {
         files: [ 'gruntfile.js' ],
@@ -162,20 +162,20 @@ module.exports = function(grunt) {
       },
       js: {
         files: [
-          "<%= dirs.js_src %>/*.js"
+          '<%= dirs.js_src %>/*.js'
         ],
-        tasks: [ "jshint:concat_before", "concat:custom", "jshint:concat_after", "uglify:custom" ],
+        tasks: [ 'jshint:concat_before', 'concat:custom', 'jshint:concat_after', 'uglify:custom' ],
       },
       less: {
         files: [
-          "<%= dirs.less %>/*.less",
-          "<%= dirs.less %>/bootswatch/*.less",
+          '<%= dirs.less %>/*.less',
+          '<%= dirs.less %>/bootswatch/*.less',
         ],
-        tasks: [ "less" ],
+        tasks: [ 'less' ],
       },
       html: {
         files: [
-          "site/**/*.html",
+          'site/**/*.html',
         ],
         tasks: [],
       },
@@ -192,12 +192,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Inital Setup Task
-  grunt.registerTask( 'init', [ 'init' , 'build' ] );
+  grunt.registerTask('init', [ 'init', 'build']);
 
   // Build Task
-  grunt.registerTask( 'build' , [ 'concat' , 'copy' , 'less' , 'uglify' ] );
+  grunt.registerTask('build', ['concat', 'copy', 'less', 'uglify']);
 
   // Default task(s).
-  grunt.registerTask( 'default' , ['build'] );
+  grunt.registerTask('default', ['build']);
 
 };
