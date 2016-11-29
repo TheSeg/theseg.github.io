@@ -6,6 +6,7 @@ Thumbs.db
 _site/
 _bower_components/
 codekit-config.json
+.jekyll-metadata
 
 # Node.js Ignores
 node_modules/
