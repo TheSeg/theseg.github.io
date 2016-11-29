@@ -2,7 +2,7 @@
   "name": "theseg-github-io",
   "version": "2.9.0",
   "author": "John *Seg* Seggerson <seg@segonmedia.com>",
-  "homepage": "http://theseg.github.io/",
+  "homepage": "https://theseg.github.io/",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheSeg/theseg.github.io.git"
