@@ -1,22 +1,22 @@
 {
   "name": "theseg-github-io",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "author": "John *Seg* Seggerson <seg@segonmedia.com>",
-  "homepage": "http://theseg.github.io/",
+  "homepage": "https://theseg.github.io/",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheSeg/theseg.github.io.git"
   },
   "private": true,
   "devDependencies": {
-    "grunt": "~1.0.1",
-    "grunt-contrib-concat": "^1.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-less": "^1.3.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-jekyll": "~0.4.4"
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jekyll": "^0.4.4"
   }
 }

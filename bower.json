@@ -1,19 +1,19 @@
 {
     "name": "theseg.github.io",
-    "version": "2.9.0",
+    "version": "2.9.1",
     "description": "Resume website for John 'Seg' Seggerson.",
-    "homepage": "http://theseg.github.io/",
+    "homepage": "https://theseg.github.io/",
     "bugs": "https://github.com/TheSeg/theseg.github.io/issues",
     "author": {
         "name": "John 'Seg' Seggerson",
-        "url": "http://theseg.github.io"
+        "url": "https://theseg.github.io"
     },
     "dependencies": {
-        "jquery": "~2.2.3",
-        "font-awesome": "~4.6.3",
+        "jquery": "~3.1.1",
+        "font-awesome": "~4.7.0",
         "holderjs": "^2.9.0",
         "html5shiv": "^3.7.3",
-        "bootstrap": "^3.3.6",
+        "bootstrap": "^3.3.7",
         "respond": "^1.4.2"
     },
     "devDependencies": {
