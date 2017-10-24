@@ -1,71 +1,4 @@
 // Seg Resume - JavaScript
-function load_Facebook() {
-  // Facebook
-  var fb_appid = $('meta[property=\'fb:app_id\']').attr('content');
-  if (fb_appid > 0) {
-    (
-      function (d, s, id) {
-        var js;
-        var fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/all.js#xfbml=1&appId=' + fb_appid;
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk')
-    );
-  } else {
-    console.log('Facebook failed to load: No App ID.');
-  }
-}
-
-function load_GooglePlus() {
-  // Google +
-  var publisherID = $('link[rel=\'publisher\']').attr('href').replace('https://plus.google.com/', '').replace('/', '');
-  var po = document.createElement('script');
-  po.type = 'text/javascript'; po.async = true;
-  if (publisherID > 0) {
-    po.src = 'https://apis.google.com/js/plusone.js?publisherid=' + publisherID;
-  } else {
-    po.src = 'https://apis.google.com/js/plusone.js';
-  }
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(po, s);
-}
-
-function load_Twitter() {
-  // Twitter
-  (
-    function (d, s, id) {
-        var js;
-        var fjs = d.getElementsByTagName(s)[0];
-        if (!d.getElementById(id)) {
-          js = d.createElement(s);
-          js.id = id;
-          js.src = 'https://platform.twitter.com/widgets.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }
-      }
-  )(document, 'script', 'twitter-wjs');
-}
-
-function load_LinkedIn() {
-  // LinkedIn
-  (
-    function (d, s, id) {
-      var js;
-      var fjs = d.getElementsByTagName(s)[0];
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = '//platform.linkedin.com/in.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-    }
-  )(document, 'script', 'linkedin-wjs');
-}
-
 $(document).ready(function () {
   $('.platform-wii.platform-unreleased').tooltip({
     'placement': 'bottom',
@@ -139,10 +72,5 @@ $(document).ready(function () {
     }, 500);
     return false;
   });
-
-  load_Twitter();
-  load_GooglePlus();
-  load_Facebook();
-  load_LinkedIn();
 
 });
