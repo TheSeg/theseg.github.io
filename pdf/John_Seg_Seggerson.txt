@@ -1,19 +1,22 @@
 John "Seg" Seggerson
-It's dangerous to develop alone. Take Seg!
+Senior Front-End Engineer
 
 Creating interactive experiences for web, mobile, and beyond for over 15 years. Expand the potential of your team in a respectful and rewarding environment by adding John “Seg” Seggerson to your team.
 
-Statistics
-* 8+ Years in Game Development
-* 66 Individual Releases
-* 11 Platforms
-* 13 Franchises
-* 18 Seasons
-* Emerson College, New Media, Bachelor of Fine Arts
+Overview:
+• 15+ Years in Web Application Development
+• Managing and directing creative and
+technical members of a production team.
+• Localization production and implementation.
+• Social Media Implementation & Development
+• API development & documentation.
+• Asset production pipeline management and
+process definition.
+• Interactive Video Production.
+• New Media, Bachelor of Fine Arts @ Emerson College
 
 
-Skills
-
+Skills:
 * Programming Languages & Technology including:
 Lua, JavaScript, Dialog Systems, PHP, Python, Ruby (Ruby on Rails), Unity, ColdFusion, ActionScript, HTML5, CSS
 
@@ -45,17 +48,9 @@ Senior Developer
 Traction Co Feb 2015 - Current
 Front-end web development work for the San Francisco based interactive media advertising agency. The role includes a verity of projects including e-commerce and scheduling websites for various international clients.
 
-Creative Director
-Space Between Studios Oct 2012 - Current
-Pre-production for non-fiction title "Understanding Video Games," a video game narrative illustrating how video games communicate to a player, using a video game. Seg is developing the project with editorial contributions from the gaming community.
-
 Front-End Engineer
 John McNeil Studio Nov 2014 - Feb 2015
 John McNeil Studio is a creative studio dedicated to making beautiful design, films, photos and interactive. The role involves a variety of projects for clients including Juniper Networks and CA Inc. Roles include implementing interactive front-ends for web and applications plus designing and building back-end solutions.
-
-Executive Producer
-Jan 2014 - Present
-In the advent of four Independent Game Festival nominations for "Dominique Pamplemousse", Deirdra "Squinky" Kiai required production assistance. Duties include release management for Steam and Humble Bundle, including art production, game engineering, and marketing assets. In addition, developing a public relations plan for GDC and general release of the title.
 
 Web Design & Programming
 Contract Feb 2013 - Current
@@ -75,11 +70,6 @@ Puzzle Design & Implementation
 Telltale Games Feb 2010 - Dec 2011
 Seg's puzzle designs for the Puzzle Agent series (including 'The Maw of Madness') blended mental challenge and narrative discovery. Design & production processes included implementation of prototypes using LUA and proprietary tools along with working with artists on specifications and art deliverables.
 
-Co-Founder & Event Producer
-Ümloud! ￼ Nov 2009 - Current
-Ümloud! is a non-profit organization which holds an annual charity concert to support Child’s Play and over 70 children’s hospitals around the world. Individuals donate to perform a live concert using the game Rock Band on DNA Lounge’s concert stage; an experience you can’t get in your living room!
-As co-founder and lead event producer, Seg has helped raise over $80,000 for children’s hospitals around the world since 2009.
-
 Build & Distribution Engineer
 Telltale Games Apr 2007 - Feb 2010
 Managed and produced builds for monthly episodic releases on digital and disc based platforms for simultaneous release. Seg created specifications and implementation for all builds internally to QA and for public facing features and experiences.
@@ -91,4 +81,4 @@ The department of Enrollment and Student Affairs needed to improve processes and
 Seg and his team developed web based tools to aid staff and students in various aspects of college life. The college improved not only efficiencies and worker productivity, but reduced economic and other variables in the admission process. Seg initiated processes that lead to fairer practices and quality experiences in the admissions process and other aspects of student life.
 
 
-Detailed portfolio & other information is included at this resume’s website: http://theseg.github.io/
+Detailed portfolio & other information is included at this resume’s website: https://theseg.github.io/
