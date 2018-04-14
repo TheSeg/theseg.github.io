@@ -215,6 +215,12 @@ table {
     @introduction-icon-size-xs: 1.25;
     margin-bottom:20px;
     .introduction-text {
+      h2 {
+        font-size: 36pt;
+        @media (min-width: @screen-sm-min) {
+          font-size: 30pt;
+        }
+      }
       @media (min-width: @screen-sm-min) {
         display:table-row;
         vertical-align:middle;
