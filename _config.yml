@@ -2,7 +2,7 @@ lsi: false
 markdown:  redcarpet
 permalink: pretty
 timezone: America/Los_Angeles
-gems:
+plugins:
   - jekyll-redirect-from
   - jemoji
 exclude: [
