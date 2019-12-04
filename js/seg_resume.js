@@ -98,18 +98,20 @@ $(document).ready(function () {
   });
 
   $('.navbar-nav a, .toTop').click(function () {
-    var scrollTo = 0;
+    var scrollTo = null;
     if ($.attr(this, 'href') === '#introduction') {
       scrollTo = ($('#navigation').offset().top) + 10;
     } else if ($.attr(this, 'href') === '#top') {
       scrollTo = 0;
-    } else {
+    } else if ($.attr(this, 'href').charAt(0) === '#') {
       scrollTo = (($($.attr(this, 'href')).offset().top) - 30);
     }
-    $('html, body').animate({
-      scrollTop: scrollTo
-    }, 500);
-    return false;
+    if (scrollTo) {
+      $('html, body').animate({
+        scrollTop: scrollTo
+      }, 500);
+      return false;
+    }
   });
 
 });
