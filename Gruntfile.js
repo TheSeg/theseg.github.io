@@ -104,6 +104,10 @@ module.exports = function (grunt) {
         src: '<%= dirs.respond %>/dest/respond.min.js',
         dest: '<%= dirs.js_dist %>/respond.min.js',
       },
+      jquery: {
+        src: '<%= dirs.jquery %>/dist/jquery.min.js',
+        dest: '<%= dirs.js_dist %>/jquery.min.js',
+      },
       font_awesome: {
         files: [
           {
