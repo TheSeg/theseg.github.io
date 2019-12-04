@@ -7,8 +7,6 @@ plugins:
   - jemoji
 exclude: [
   "README.md",
-  "bower.json",
-  "bower_components",
   "node_modules",
   "Gemfile*",
   "Gruntfile.js",

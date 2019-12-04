@@ -11,17 +11,17 @@ module.exports = function (grunt) {
       js_src: 'js/_src',
       less: '_less',
       css: 'css',
-      bower_components: '_bower_components',
+      node_modules: 'node_modules',
       bs: {
-        root: '<%= dirs.bower_components %>/bootstrap',
-        js: '<%= dirs.bower_components %>/bootstrap/js',
-        less: '<%= dirs.bower_components %>/bootstrap/less',
+        root: '<%= dirs.node_modules %>/bootstrap',
+        js: '<%= dirs.node_modules %>/bootstrap/js',
+        less: '<%= dirs.node_modules %>/bootstrap/less',
       },
-      fa: '<%= dirs.bower_components %>/font-awesome',
-      holderjs: '<%= dirs.bower_components %>/holderjs',
-      html5shiv: '<%= dirs.bower_components %>/html5shiv/dist',
-      jquery: '<%= dirs.bower_components %>/jquery',
-      respond: '<%= dirs.brower_components %>/respond',
+      fa: '<%= dirs.node_modules %>/font-awesome',
+      holderjs: '<%= dirs.node_modules %>/holderjs',
+      html5shiv: '<%= dirs.node_modules %>/html5shiv/dist',
+      jquery: '<%= dirs.node_modules %>/jquery',
+      respond: '<%= dirs.node_modules %>/respond.js',
     },
     // Config Tasks
     init: {
@@ -45,6 +45,7 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= dirs.css %>/theme-default.css': '<%= dirs.less %>/theme-default.less',
+          '<%= dirs.css %>/theme-valve.css': '<%= dirs.less %>/theme-valve.less',
         },
       },
       font_awesome: {
@@ -100,7 +101,7 @@ module.exports = function (grunt) {
         dest: '<%= dirs.js_dist %>/html5shiv.js',
       },
       respond: {
-        src: '<%= dirs.respond %>/respond.min.js',
+        src: '<%= dirs.respond %>/dest/respond.min.js',
         dest: '<%= dirs.js_dist %>/respond.min.js',
       },
       font_awesome: {
