@@ -9,7 +9,7 @@
   },
   "private": true,
   "devDependencies": {
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
