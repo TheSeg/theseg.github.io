@@ -20,9 +20,9 @@
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-jekyll": "^1.0.1",
-    "holderjs": "^2.9.7",
+    "holderjs": "^2.9.9",
     "html5shiv": "^3.7.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "respond.js": "^1.4.2"
   },
   "dependencies": {}
