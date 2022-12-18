@@ -1,22 +1,15 @@
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ * Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2022 Fonticons, Inc.
  */
+// Font Awesome core compile (Web Fonts-based)
+// -------------------------
 
-@import "variables";
 
-// Fix for Seg's Resume
-//@fa-font-path:        "../font";
-@fa-font-path:        "https://netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts"; // for referencing Bootstrap CDN font files directly
+@import "../node_modules/@fortawesome/fontawesome-pro/less/fontawesome.less";
 
-@import "mixins.less";
-@import "path.less";
-@import "core.less";
-@import "larger.less";
-@import "fixed-width.less";
-@import "list.less";
-@import "bordered-pulled.less";
-@import "animated.less";
-@import "rotated-flipped.less";
-@import "stacked.less";
-@import "icons.less";
+@fa-font-path: "../font";
+
+@import "../node_modules/@fortawesome/fontawesome-pro/less/brands.less";
+@import "../node_modules/@fortawesome/fontawesome-pro/less/solid.less";
