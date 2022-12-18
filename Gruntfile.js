@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         js: '<%= dirs.node_modules %>/bootstrap/js',
         less: '<%= dirs.node_modules %>/bootstrap/less',
       },
-      fa: '<%= dirs.node_modules %>/font-awesome',
+      fa: '<%= dirs.node_modules %>/@fortawesome/fontawesome-pro',
       holderjs: '<%= dirs.node_modules %>/holderjs',
       html5shiv: '<%= dirs.node_modules %>/html5shiv/dist',
       jquery: '<%= dirs.node_modules %>/jquery',
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: '<%= dirs.fa %>/fonts/*',
+            src: '<%= dirs.fa %>/webfonts/*',
             dest: 'font/',
             flatten: true,
             filter: 'isFile',
